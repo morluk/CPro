@@ -1,1 +1,3 @@
 *.directory
+/CPro/build/
+/CPro/dist/

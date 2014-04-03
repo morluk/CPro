@@ -1,0 +1,133 @@
+*****************************************
+*         CocktailPro 2007              *
+*                                       *
+*        Ralf Hahn, 24.08.2007          *
+*****************************************
+
+Verbindung zu Display hergestellt
+Verbindung zu Waage hergestellt
+
+Dosierer: Rum initialisiert
+Dosierer: Wodka initialisiert
+Dosierer: Limetten initialisiert
+Dosierer: Eis initialisiert
+Dosierer: Zitronensaft initialisiert
+Dosierer: Zucker initialisiert
+Dosierer: Osaft initialisiert
+
+Verbindung zu Mischer hergestellt
+Verbindung zu Mischbehaelter hergestellt
+Verbindung zu Stampfer hergestellt
+
+Rezeptbuch initialisiert
+Es stehen 3 Cocktails zur Verfuegung
+
+
+1. Planters Punch
+2. Margaritha
+3. Caipiroska
+
+Bitte Auswahl treffen: (x zum Verlassen)3
+3
+
+Caipiroska wird zubereitet
+
+
+Ventil Wodka: geoeffnet
+Delta: 4 mg
+Delta: 8 mg
+Delta: 12 mg
+Delta: 16 mg
+Delta: 20 mg
+Delta: 24 mg
+Delta: 28 mg
+Delta: 32 mg
+Gesamtgewicht: 32 mg
+Ventil Wodka: geschlossen
+
+Ventil Zitronensaft: geoeffnet
+Delta: 4 mg
+Delta: 8 mg
+Delta: 12 mg
+Delta: 16 mg
+Delta: 20 mg
+Gesamtgewicht: 52 mg
+Ventil Zitronensaft: geschlossen
+
+Ventil Limetten: geoeffnet
+Delta: 10 mg
+Delta: 20 mg
+Delta: 30 mg
+Delta: 40 mg
+Delta: 50 mg
+Delta: 60 mg
+Delta: 70 mg
+Delta: 80 mg
+Gesamtgewicht: 132 mg
+Ventil Limetten: geschlossen
+
+Stampfer aktiviert
+# # # # # # # # # # # # # # # # # # # #
+Stampfer deaktiviert
+
+Ventil Zucker: geoeffnet
+Delta: 4 mg
+Delta: 8 mg
+Delta: 12 mg
+Gesamtgewicht: 144 mg
+Ventil Zucker: geschlossen
+
+Ventil Eis: geoeffnet
+Delta: 4 mg
+Delta: 8 mg
+Delta: 12 mg
+Delta: 16 mg
+Delta: 20 mg
+Delta: 24 mg
+Delta: 28 mg
+Delta: 32 mg
+Delta: 36 mg
+Delta: 40 mg
+Delta: 44 mg
+Delta: 48 mg
+Delta: 52 mg
+Delta: 56 mg
+Delta: 60 mg
+Delta: 64 mg
+Delta: 68 mg
+Delta: 72 mg
+Delta: 76 mg
+Delta: 80 mg
+Delta: 84 mg
+Delta: 88 mg
+Delta: 92 mg
+Delta: 96 mg
+Delta: 100 mg
+Gesamtgewicht: 244 mg
+Ventil Eis: geschlossen
+
+Mischer aktiviert
+# # # # # # # # # # # # # # # # # # # #
+Mischer deaktiviert
+
+Ihr Cocktail wird ausgegeben ...
+Restmenge: 219 g
+Restmenge: 194 g
+Restmenge: 169 g
+Restmenge: 144 g
+Restmenge: 119 g
+Restmenge: 94 g
+Restmenge: 69 g
+Restmenge: 44 g
+Restmenge: 19 g
+
+Ihr Cocktail ist fertig!
+
+Mischbehaelter wurde gereinigt ...
+
+
+1. Planters Punch
+2. Margaritha
+3. Caipiroska
+
+Bitte Auswahl treffen: (x zum Verlassen)
