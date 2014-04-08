@@ -4,7 +4,7 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
-      <itemPath>Rezeptbuch.h</itemPath>
+      <itemPath>/home/gugugs/CPro_git/include/Rezeptbuch.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -13,7 +13,7 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>main.cpp</itemPath>
+      <itemPath>/home/gugugs/CPro_git/src/main.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Test Files"
@@ -36,15 +36,23 @@
         <rebuildPropChanged>false</rebuildPropChanged>
       </toolsSet>
       <compileType>
+        <ccTool>
+          <incDir>
+            <pElem>../include</pElem>
+          </incDir>
+        </ccTool>
         <linkerTool>
           <linkerLibItems>
-            <linkerLibFileItem>Rezeptbuch_CASE_G++_Ubuntu.o</linkerLibFileItem>
+            <linkerLibFileItem>../Resource/RezeptbuchBinaries_2014/Rezeptbuch_CASE_G++_Ubuntu.o</linkerLibFileItem>
           </linkerLibItems>
         </linkerTool>
       </compileType>
-      <item path="Rezeptbuch.h" ex="false" tool="3" flavor2="0">
+      <item path="/home/gugugs/CPro_git/include/Rezeptbuch.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
       </item>
-      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      <item path="/home/gugugs/CPro_git/src/main.cpp" ex="false" tool="1" flavor2="0">
       </item>
     </conf>
     <conf name="Release" type="1">
@@ -67,9 +75,12 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
-      <item path="Rezeptbuch.h" ex="false" tool="3" flavor2="0">
+      <item path="/home/gugugs/CPro_git/include/Rezeptbuch.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
       </item>
-      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      <item path="/home/gugugs/CPro_git/src/main.cpp" ex="false" tool="1" flavor2="0">
       </item>
     </conf>
   </confs>

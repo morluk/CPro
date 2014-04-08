@@ -35,7 +35,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/main.o
+	${OBJECTDIR}/_ext/1298396856/main.o
 
 
 # C Compiler Flags
@@ -52,22 +52,22 @@ FFLAGS=
 ASFLAGS=
 
 # Link Libraries and Options
-LDLIBSOPTIONS=Rezeptbuch_CASE_G++_Ubuntu.o
+LDLIBSOPTIONS=../Resource/RezeptbuchBinaries_2014/Rezeptbuch_CASE_G++_Ubuntu.o
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
 	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/netbeans_project
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/netbeans_project: Rezeptbuch_CASE_G++_Ubuntu.o
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/netbeans_project: ../Resource/RezeptbuchBinaries_2014/Rezeptbuch_CASE_G++_Ubuntu.o
 
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/netbeans_project: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/netbeans_project ${OBJECTFILES} ${LDLIBSOPTIONS}
 
-${OBJECTDIR}/main.o: main.cpp 
-	${MKDIR} -p ${OBJECTDIR}
+${OBJECTDIR}/_ext/1298396856/main.o: /home/gugugs/CPro_git/src/main.cpp 
+	${MKDIR} -p ${OBJECTDIR}/_ext/1298396856
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
+	$(COMPILE.cc) -g -I../include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/1298396856/main.o /home/gugugs/CPro_git/src/main.cpp
 
 # Subprojects
 .build-subprojects:
