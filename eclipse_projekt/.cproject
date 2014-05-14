@@ -35,9 +35,9 @@
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.c.linker.exe.debug.154743559" name="GCC C Linker" superClass="cdt.managedbuild.tool.gnu.c.linker.exe.debug"/>
 							<tool id="cdt.managedbuild.tool.gnu.cpp.linker.exe.debug.1941251109" name="GCC C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.exe.debug">
-								<option id="gnu.cpp.link.option.paths.427599598" name="Library search path (-L)" superClass="gnu.cpp.link.option.paths" valueType="libPaths"/>
-								<option id="gnu.cpp.link.option.libs.1049172215" name="Libraries (-l)" superClass="gnu.cpp.link.option.libs" valueType="libs"/>
-								<option id="gnu.cpp.link.option.userobjs.1304049503" superClass="gnu.cpp.link.option.userobjs" valueType="userObjs">
+								<option id="gnu.cpp.link.option.paths.427599598" name="Library search path (-L)" superClass="gnu.cpp.link.option.paths"/>
+								<option id="gnu.cpp.link.option.libs.1049172215" name="Libraries (-l)" superClass="gnu.cpp.link.option.libs"/>
+								<option id="gnu.cpp.link.option.userobjs.1304049503" name="Other objects" superClass="gnu.cpp.link.option.userobjs" valueType="userObjs">
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/libs/Rezeptbuch_CASE_G++_Ubuntu.o}&quot;"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.1527612886" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
@@ -48,6 +48,16 @@
 							<tool id="cdt.managedbuild.tool.gnu.assembler.exe.debug.1098140374" name="GCC Assembler" superClass="cdt.managedbuild.tool.gnu.assembler.exe.debug">
 								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.1333126761" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
 							</tool>
+						</toolChain>
+					</folderInfo>
+					<folderInfo id="cdt.managedbuild.config.gnu.exe.debug.2037349076.458312213" name="/" resourcePath="src">
+						<toolChain id="cdt.managedbuild.toolchain.gnu.exe.debug.2010717949" name="Linux GCC" superClass="cdt.managedbuild.toolchain.gnu.exe.debug" unusedChildren="">
+							<tool id="cdt.managedbuild.tool.gnu.archiver.base.1348032576" name="GCC Archiver" superClass="cdt.managedbuild.tool.gnu.archiver.base.187087976"/>
+							<tool id="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.1412180923" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.844075824"/>
+							<tool id="cdt.managedbuild.tool.gnu.c.compiler.exe.debug.746470073" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.exe.debug.396857779"/>
+							<tool id="cdt.managedbuild.tool.gnu.c.linker.exe.debug.1921949082" name="GCC C Linker" superClass="cdt.managedbuild.tool.gnu.c.linker.exe.debug.154743559"/>
+							<tool id="cdt.managedbuild.tool.gnu.cpp.linker.exe.debug.1995175844" name="GCC C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.exe.debug.1941251109"/>
+							<tool id="cdt.managedbuild.tool.gnu.assembler.exe.debug.264457591" name="GCC Assembler" superClass="cdt.managedbuild.tool.gnu.assembler.exe.debug.1098140374"/>
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
