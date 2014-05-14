@@ -23,6 +23,8 @@ public:
 	void setWaage(const Waage* waage);
 	//
 	virtual ~Dosierstation();
+	//
+	virtual void update();
 	
 private:
 	//

@@ -35,3 +35,7 @@ Dosierstation::Dosierstation()
 Dosierstation::~Dosierstation() {
 
 }
+
+void Dosierstation::update() {
+
+}
