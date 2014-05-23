@@ -17,7 +17,7 @@ MischbaresRezeptbuch::MischbaresRezeptbuch()
  */
 Rezept* MischbaresRezeptbuch::getRezept(unsigned int i)
 {
-	if (i >= 0 || i < mischbareRezepte.size()) {
+	if (i >= 0 && i < mischbareRezepte.size()) {
 		return mischbareRezepte[i];
 	} else {
 		return NULL;
@@ -66,7 +66,7 @@ int MischbaresRezeptbuch::readZutatenListe(list<string>* lines, string FileName)
 			/* und Groesse der Liste als Anzahl der Zeilen zurueck */
 			return(lines->size());
 		}
-		catch (string exc){
+		catch (string & exc){
 			cerr << exc << endl;
 			exit(1);
 		}
