@@ -1,10 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<configurationDescriptor version="90">
+<configurationDescriptor version="94">
   <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
-      <itemPath>/home/gugugs/CPro_git/include/Rezeptbuch.h</itemPath>
+      <itemPath>../include/Art.h</itemPath>
+      <itemPath>../include/CocktailProController.h</itemPath>
+      <itemPath>../include/Dosierstation.h</itemPath>
+      <itemPath>../include/Entleerer.h</itemPath>
+      <itemPath>../include/MischbaresRezeptbuch.h</itemPath>
+      <itemPath>../include/Mischer.h</itemPath>
+      <itemPath>../include/ObserverWaage.h</itemPath>
+      <itemPath>../include/Rezeptbuch.h</itemPath>
+      <itemPath>../include/Simulation.h</itemPath>
+      <itemPath>../include/Stampfer.h</itemPath>
+      <itemPath>../include/SubjectWaage.h</itemPath>
+      <itemPath>../include/UserInterface.h</itemPath>
+      <itemPath>../include/Waage.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -13,7 +25,19 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>/home/gugugs/CPro_git/src/main.cpp</itemPath>
+      <itemPath>../src/Art.cpp</itemPath>
+      <itemPath>../src/CocktailProController.cpp</itemPath>
+      <itemPath>../src/Dosierstation.cpp</itemPath>
+      <itemPath>../src/Entleerer.cpp</itemPath>
+      <itemPath>../src/MischbaresRezeptbuch.cpp</itemPath>
+      <itemPath>../src/Mischer.cpp</itemPath>
+      <itemPath>../src/ObserverWaage.cpp</itemPath>
+      <itemPath>../src/Simulation.cpp</itemPath>
+      <itemPath>../src/Stampfer.cpp</itemPath>
+      <itemPath>../src/SubjectWaage.cpp</itemPath>
+      <itemPath>../src/UserInterface.cpp</itemPath>
+      <itemPath>../src/Waage.cpp</itemPath>
+      <itemPath>../src/main.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Test Files"
@@ -27,6 +51,9 @@
       <itemPath>Makefile</itemPath>
     </logicalFolder>
   </logicalFolder>
+  <sourceRootList>
+    <Elem>../include</Elem>
+  </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
     <conf name="Debug" type="1">
@@ -47,12 +74,57 @@
           </linkerLibItems>
         </linkerTool>
       </compileType>
-      <item path="/home/gugugs/CPro_git/include/Rezeptbuch.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
+      <item path="../include/Art.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="/home/gugugs/CPro_git/src/main.cpp" ex="false" tool="1" flavor2="0">
+      <item path="../include/CocktailProController.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../include/Dosierstation.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../include/Entleerer.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../include/MischbaresRezeptbuch.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../include/Mischer.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../include/ObserverWaage.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../include/Rezeptbuch.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../include/Simulation.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../include/Stampfer.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../include/SubjectWaage.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../include/UserInterface.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../include/Waage.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../src/Art.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../src/CocktailProController.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../src/Dosierstation.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../src/Entleerer.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../src/MischbaresRezeptbuch.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../src/Mischer.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../src/ObserverWaage.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../src/Simulation.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../src/Stampfer.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../src/SubjectWaage.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../src/UserInterface.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../src/Waage.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../src/main.cpp" ex="false" tool="1" flavor2="0">
       </item>
     </conf>
     <conf name="Release" type="1">
@@ -75,12 +147,57 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
-      <item path="/home/gugugs/CPro_git/include/Rezeptbuch.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
+      <item path="../include/Art.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="/home/gugugs/CPro_git/src/main.cpp" ex="false" tool="1" flavor2="0">
+      <item path="../include/CocktailProController.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../include/Dosierstation.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../include/Entleerer.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../include/MischbaresRezeptbuch.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../include/Mischer.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../include/ObserverWaage.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../include/Rezeptbuch.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../include/Simulation.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../include/Stampfer.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../include/SubjectWaage.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../include/UserInterface.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../include/Waage.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../src/Art.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../src/CocktailProController.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../src/Dosierstation.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../src/Entleerer.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../src/MischbaresRezeptbuch.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../src/Mischer.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../src/ObserverWaage.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../src/Simulation.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../src/Stampfer.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../src/SubjectWaage.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../src/UserInterface.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../src/Waage.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../src/main.cpp" ex="false" tool="1" flavor2="0">
       </item>
     </conf>
   </confs>
