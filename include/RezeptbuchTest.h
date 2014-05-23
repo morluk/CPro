@@ -11,13 +11,23 @@
 #include <cppunit/Test.h>
 #include <cppunit/TestCase.h>
 #include <string>
+#include <vector>
+#include <algorithm>
+#include "MischbaresRezeptbuch.h"
+#include "Rezeptbuch.h"
 
 using namespace std;
 
 class RezeptbuchTest : CppUnit::TestCase {
 public:
-	RezeptbuchTest(string name);
+	RezeptbuchTest();
+
 	virtual ~RezeptbuchTest();
+private:
+	MischbaresRezeptbuch mischbaresRezeptbuch;
+	void testDifference();
+	void testRange();
+	void testRezepte();
 };
 
 #endif /* REZEPTBUCHTEST_H_ */

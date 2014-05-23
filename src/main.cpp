@@ -4,6 +4,7 @@
 
 //#include "Rezeptbuch.h"
 #include "MischbaresRezeptbuch.h"
+#include "RezeptbuchTest.h"
 
 #include <iostream>
 using namespace std;
@@ -59,6 +60,8 @@ int main() {
     //cin >> c;
 
     delete MyRezeptbuch;
+
+    RezeptbuchTest rezeptbuchTest;
 
     return 1;
 }
