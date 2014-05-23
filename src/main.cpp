@@ -2,7 +2,8 @@
 // Programm zum Testen der Methodenaufrufe des Rezeptbuchs aus dem SWE Praktikum im WS 2013 
 // Ralf Hahn,  04.10.2013
 
-#include "Rezeptbuch.h"
+//#include "Rezeptbuch.h"
+#include "MischbaresRezeptbuch.h"
 
 #include <iostream>
 using namespace std;
@@ -13,12 +14,12 @@ int main() {
     int i = 0;
 
     // das Rezeptbuch anlegen
-    Rezeptbuch* MyRezeptbuch = new Rezeptbuch;
+    MischbaresRezeptbuch* MyRezeptbuch = new MischbaresRezeptbuch;
 
 
     // Rezeptliste ausgeben
     cout << "*********************************************" << endl;
-    cout << "Es gibt " << MyRezeptbuch->getAnzahlRezepte() << " Cocktails" << endl;
+    cout << "Es gibt " << MyRezeptbuch->getAnzahlRezepte() << " mischbare Cocktails" << endl;
 
     for (i = 0; i < MyRezeptbuch->getAnzahlRezepte(); i++) {
         Rezept* r = MyRezeptbuch->getRezept(i);
