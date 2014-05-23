@@ -12,6 +12,7 @@
       <itemPath>../include/Mischer.h</itemPath>
       <itemPath>../include/ObserverWaage.h</itemPath>
       <itemPath>../include/Rezeptbuch.h</itemPath>
+      <itemPath>../include/RezeptbuchTest.h</itemPath>
       <itemPath>../include/Simulation.h</itemPath>
       <itemPath>../include/Stampfer.h</itemPath>
       <itemPath>../include/SubjectWaage.h</itemPath>
@@ -32,6 +33,7 @@
       <itemPath>../src/MischbaresRezeptbuch.cpp</itemPath>
       <itemPath>../src/Mischer.cpp</itemPath>
       <itemPath>../src/ObserverWaage.cpp</itemPath>
+      <itemPath>../src/RezeptbuchTest.cpp</itemPath>
       <itemPath>../src/Simulation.cpp</itemPath>
       <itemPath>../src/Stampfer.cpp</itemPath>
       <itemPath>../src/SubjectWaage.cpp</itemPath>
@@ -67,6 +69,7 @@
           <incDir>
             <pElem>../include</pElem>
           </incDir>
+          <commandLine>-lcppunit</commandLine>
         </ccTool>
         <linkerTool>
           <linkerLibItems>
@@ -89,6 +92,8 @@
       <item path="../include/ObserverWaage.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="../include/Rezeptbuch.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../include/RezeptbuchTest.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="../include/Simulation.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -113,6 +118,8 @@
       <item path="../src/Mischer.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="../src/ObserverWaage.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../src/RezeptbuchTest.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="../src/Simulation.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -163,6 +170,8 @@
       </item>
       <item path="../include/Rezeptbuch.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="../include/RezeptbuchTest.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="../include/Simulation.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="../include/Stampfer.h" ex="false" tool="3" flavor2="0">
@@ -186,6 +195,8 @@
       <item path="../src/Mischer.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="../src/ObserverWaage.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../src/RezeptbuchTest.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="../src/Simulation.cpp" ex="false" tool="1" flavor2="0">
       </item>

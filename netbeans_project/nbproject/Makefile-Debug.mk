@@ -42,6 +42,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/_ext/1360937237/MischbaresRezeptbuch.o \
 	${OBJECTDIR}/_ext/1360937237/Mischer.o \
 	${OBJECTDIR}/_ext/1360937237/ObserverWaage.o \
+	${OBJECTDIR}/_ext/1360937237/RezeptbuchTest.o \
 	${OBJECTDIR}/_ext/1360937237/Simulation.o \
 	${OBJECTDIR}/_ext/1360937237/Stampfer.o \
 	${OBJECTDIR}/_ext/1360937237/SubjectWaage.o \
@@ -54,8 +55,8 @@ OBJECTFILES= \
 CFLAGS=
 
 # CC Compiler Flags
-CCFLAGS=
-CXXFLAGS=
+CCFLAGS=-lcppunit
+CXXFLAGS=-lcppunit
 
 # Fortran Compiler Flags
 FFLAGS=
@@ -110,6 +111,11 @@ ${OBJECTDIR}/_ext/1360937237/ObserverWaage.o: ../src/ObserverWaage.cpp
 	${MKDIR} -p ${OBJECTDIR}/_ext/1360937237
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -I../include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/1360937237/ObserverWaage.o ../src/ObserverWaage.cpp
+
+${OBJECTDIR}/_ext/1360937237/RezeptbuchTest.o: ../src/RezeptbuchTest.cpp 
+	${MKDIR} -p ${OBJECTDIR}/_ext/1360937237
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -I../include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/1360937237/RezeptbuchTest.o ../src/RezeptbuchTest.cpp
 
 ${OBJECTDIR}/_ext/1360937237/Simulation.o: ../src/Simulation.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1360937237
