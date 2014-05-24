@@ -48,9 +48,6 @@ private:
 	vector<Rezept*> mischbareRezepte;
 	
 	//
-	Rezeptbuch rezeptbuch;
-	
-	//
 	list<string> zutaten;
 };
 

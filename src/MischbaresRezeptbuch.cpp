@@ -4,6 +4,7 @@
 #include "MischbaresRezeptbuch.h"
 //
 MischbaresRezeptbuch::MischbaresRezeptbuch()
+:Rezeptbuch()
 {
 	const string FileName="zutaten.txt";
 //	zutaten = list<string>();
@@ -73,23 +74,23 @@ int MischbaresRezeptbuch::readZutatenListe(list<string>* lines, string FileName)
 }
 
 void MischbaresRezeptbuch::calculateMischbareRezepte() {
-	for (int i = 0; i < rezeptbuch.getAnzahlRezepte(); ++i) {
+	for (int i = 0; i < Rezeptbuch::getAnzahlRezepte(); ++i) {
 		bool rezeptMischbar = true;
-		for (int j = 0; j < rezeptbuch.getRezept(i)->getAnzahlRezeptschritte(); ++j) {
-			string aktZutat = rezeptbuch.getRezept(i)->getRezeptSchritt(j)->getZutat();
+		for (int j = 0; j < Rezeptbuch::getRezept(i)->getAnzahlRezeptschritte(); ++j) {
+			string aktZutat = Rezeptbuch::getRezept(i)->getRezeptSchritt(j)->getZutat();
 			if (!istZutatVorhanden(aktZutat)) {
 				rezeptMischbar = false;
 				break;
 			}
 		}
 		if (rezeptMischbar) {
-			mischbareRezepte.push_back(rezeptbuch.getRezept(i));
+			mischbareRezepte.push_back(Rezeptbuch::getRezept(i));
 		}
 	}
 }
 
 bool MischbaresRezeptbuch::deleteRezept(unsigned int i) {
-	if (i >= 0 || i < mischbareRezepte.size()) {
+	if (i >= 0 && i < mischbareRezepte.size()) {
 			mischbareRezepte.erase(mischbareRezepte.begin()+i);
 			return true;
 		} else {
