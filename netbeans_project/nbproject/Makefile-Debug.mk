@@ -55,8 +55,8 @@ OBJECTFILES= \
 CFLAGS=
 
 # CC Compiler Flags
-CCFLAGS=-lcppunit
-CXXFLAGS=-lcppunit
+CCFLAGS=
+CXXFLAGS=
 
 # Fortran Compiler Flags
 FFLAGS=
@@ -65,7 +65,7 @@ FFLAGS=
 ASFLAGS=
 
 # Link Libraries and Options
-LDLIBSOPTIONS=../Resource/RezeptbuchBinaries_2014/Rezeptbuch_CASE_G++_Ubuntu.o
+LDLIBSOPTIONS=../Resource/RezeptbuchBinaries_2014/Rezeptbuch_CASE_G++_Ubuntu.o -lcppunit
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
@@ -80,72 +80,72 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/netbeans_project: ${OBJECTFILES}
 ${OBJECTDIR}/_ext/1360937237/Art.o: ../src/Art.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1360937237
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I../include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/1360937237/Art.o ../src/Art.cpp
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/1360937237/Art.o ../src/Art.cpp
 
 ${OBJECTDIR}/_ext/1360937237/CocktailProController.o: ../src/CocktailProController.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1360937237
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I../include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/1360937237/CocktailProController.o ../src/CocktailProController.cpp
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/1360937237/CocktailProController.o ../src/CocktailProController.cpp
 
 ${OBJECTDIR}/_ext/1360937237/Dosierstation.o: ../src/Dosierstation.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1360937237
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I../include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/1360937237/Dosierstation.o ../src/Dosierstation.cpp
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/1360937237/Dosierstation.o ../src/Dosierstation.cpp
 
 ${OBJECTDIR}/_ext/1360937237/Entleerer.o: ../src/Entleerer.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1360937237
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I../include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/1360937237/Entleerer.o ../src/Entleerer.cpp
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/1360937237/Entleerer.o ../src/Entleerer.cpp
 
 ${OBJECTDIR}/_ext/1360937237/MischbaresRezeptbuch.o: ../src/MischbaresRezeptbuch.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1360937237
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I../include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/1360937237/MischbaresRezeptbuch.o ../src/MischbaresRezeptbuch.cpp
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/1360937237/MischbaresRezeptbuch.o ../src/MischbaresRezeptbuch.cpp
 
 ${OBJECTDIR}/_ext/1360937237/Mischer.o: ../src/Mischer.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1360937237
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I../include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/1360937237/Mischer.o ../src/Mischer.cpp
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/1360937237/Mischer.o ../src/Mischer.cpp
 
 ${OBJECTDIR}/_ext/1360937237/ObserverWaage.o: ../src/ObserverWaage.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1360937237
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I../include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/1360937237/ObserverWaage.o ../src/ObserverWaage.cpp
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/1360937237/ObserverWaage.o ../src/ObserverWaage.cpp
 
 ${OBJECTDIR}/_ext/1360937237/RezeptbuchTest.o: ../src/RezeptbuchTest.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1360937237
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I../include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/1360937237/RezeptbuchTest.o ../src/RezeptbuchTest.cpp
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/1360937237/RezeptbuchTest.o ../src/RezeptbuchTest.cpp
 
 ${OBJECTDIR}/_ext/1360937237/Simulation.o: ../src/Simulation.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1360937237
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I../include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/1360937237/Simulation.o ../src/Simulation.cpp
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/1360937237/Simulation.o ../src/Simulation.cpp
 
 ${OBJECTDIR}/_ext/1360937237/Stampfer.o: ../src/Stampfer.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1360937237
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I../include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/1360937237/Stampfer.o ../src/Stampfer.cpp
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/1360937237/Stampfer.o ../src/Stampfer.cpp
 
 ${OBJECTDIR}/_ext/1360937237/SubjectWaage.o: ../src/SubjectWaage.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1360937237
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I../include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/1360937237/SubjectWaage.o ../src/SubjectWaage.cpp
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/1360937237/SubjectWaage.o ../src/SubjectWaage.cpp
 
 ${OBJECTDIR}/_ext/1360937237/UserInterface.o: ../src/UserInterface.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1360937237
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I../include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/1360937237/UserInterface.o ../src/UserInterface.cpp
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/1360937237/UserInterface.o ../src/UserInterface.cpp
 
 ${OBJECTDIR}/_ext/1360937237/Waage.o: ../src/Waage.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1360937237
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I../include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/1360937237/Waage.o ../src/Waage.cpp
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/1360937237/Waage.o ../src/Waage.cpp
 
 ${OBJECTDIR}/_ext/1360937237/main.o: ../src/main.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1360937237
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I../include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/1360937237/main.o ../src/main.cpp
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/1360937237/main.o ../src/main.cpp
 
 # Subprojects
 .build-subprojects:

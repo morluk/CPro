@@ -3,6 +3,9 @@
 #ifndef COCKTAILPROCONTROLLER_H_H
 #define COCKTAILPROCONTROLLER_H_H
 
+#include "ObserverWaage.h"
+#include "string.h"
+#include "Waage.h"
 #include <string>
 #include <vector>
 #include "Dosierstation.h"
@@ -14,6 +17,7 @@
 
 using namespace std;
 
+//Input Output UserInterface. Konsolenapplikation
 class UserInterface;
 
 //Legt Komponenten (Dosierstation, Stampfer, ..) an und koordiniert sie durch die Rezeptschritte
@@ -23,15 +27,15 @@ public:
 	//
 	CocktailProController();
 	//
-	CocktailProController(const UserInterface* userinterface);
+	CocktailProController(UserInterface * userinterface);
 	//
-	string mischbareRezepteToString();
+	std::string mischbareRezepteToString();
 	//
 	void mischeRezept(int index);
 	
 private:
 	//
-	vector<Dosierstation> dosierstation;
+	std::vector<Dosierstation> dosierstation;
 	
 	//
 	Entleerer entleerer;
@@ -46,14 +50,13 @@ private:
 	Stampfer stampfer;
 	
 	//
-	UserInterface* userInterface;
+	UserInterface * userInterface;
 	
 	//
 	Waage waage;
 	
 	//
 	void init();
-	
 };
 
 #endif

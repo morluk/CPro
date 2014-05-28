@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<configurationDescriptor version="94">
+<configurationDescriptor version="90">
   <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
-      <itemPath>../include/Art.h</itemPath>
-      <itemPath>../include/CocktailProController.h</itemPath>
-      <itemPath>../include/Dosierstation.h</itemPath>
-      <itemPath>../include/Entleerer.h</itemPath>
-      <itemPath>../include/MischbaresRezeptbuch.h</itemPath>
-      <itemPath>../include/Mischer.h</itemPath>
-      <itemPath>../include/ObserverWaage.h</itemPath>
-      <itemPath>../include/Rezeptbuch.h</itemPath>
-      <itemPath>../include/RezeptbuchTest.h</itemPath>
-      <itemPath>../include/Simulation.h</itemPath>
-      <itemPath>../include/Stampfer.h</itemPath>
-      <itemPath>../include/SubjectWaage.h</itemPath>
-      <itemPath>../include/UserInterface.h</itemPath>
-      <itemPath>../include/Waage.h</itemPath>
+      <itemPath>../src/Art.h</itemPath>
+      <itemPath>../src/CocktailProController.h</itemPath>
+      <itemPath>../src/Dosierstation.h</itemPath>
+      <itemPath>../src/Entleerer.h</itemPath>
+      <itemPath>../src/MischbaresRezeptbuch.h</itemPath>
+      <itemPath>../src/Mischer.h</itemPath>
+      <itemPath>../src/ObserverWaage.h</itemPath>
+      <itemPath>../src/Rezeptbuch.h</itemPath>
+      <itemPath>../src/RezeptbuchTest.h</itemPath>
+      <itemPath>../src/Simulation.h</itemPath>
+      <itemPath>../src/Stampfer.h</itemPath>
+      <itemPath>../src/SubjectWaage.h</itemPath>
+      <itemPath>../src/UserInterface.h</itemPath>
+      <itemPath>../src/Waage.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -65,71 +65,66 @@
         <rebuildPropChanged>false</rebuildPropChanged>
       </toolsSet>
       <compileType>
-        <ccTool>
-          <incDir>
-            <pElem>../include</pElem>
-          </incDir>
-          <commandLine>-lcppunit</commandLine>
-        </ccTool>
         <linkerTool>
           <linkerLibItems>
             <linkerLibFileItem>../Resource/RezeptbuchBinaries_2014/Rezeptbuch_CASE_G++_Ubuntu.o</linkerLibFileItem>
+            <linkerOptionItem>-lcppunit</linkerOptionItem>
           </linkerLibItems>
         </linkerTool>
       </compileType>
-      <item path="../include/Art.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="../include/CocktailProController.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="../include/Dosierstation.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="../include/Entleerer.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="../include/MischbaresRezeptbuch.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="../include/Mischer.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="../include/ObserverWaage.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="../include/Rezeptbuch.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="../include/RezeptbuchTest.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="../include/Simulation.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="../include/Stampfer.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="../include/SubjectWaage.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="../include/UserInterface.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="../include/Waage.h" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="../src/Art.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../src/Art.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="../src/CocktailProController.cpp" ex="false" tool="1" flavor2="0">
       </item>
+      <item path="../src/CocktailProController.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="../src/Dosierstation.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../src/Dosierstation.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="../src/Entleerer.cpp" ex="false" tool="1" flavor2="0">
       </item>
+      <item path="../src/Entleerer.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="../src/MischbaresRezeptbuch.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../src/MischbaresRezeptbuch.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="../src/Mischer.cpp" ex="false" tool="1" flavor2="0">
       </item>
+      <item path="../src/Mischer.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="../src/ObserverWaage.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../src/ObserverWaage.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../src/Rezeptbuch.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="../src/RezeptbuchTest.cpp" ex="false" tool="1" flavor2="0">
       </item>
+      <item path="../src/RezeptbuchTest.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="../src/Simulation.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../src/Simulation.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="../src/Stampfer.cpp" ex="false" tool="1" flavor2="0">
       </item>
+      <item path="../src/Stampfer.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="../src/SubjectWaage.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../src/SubjectWaage.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="../src/UserInterface.cpp" ex="false" tool="1" flavor2="0">
       </item>
+      <item path="../src/UserInterface.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="../src/Waage.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../src/Waage.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="../src/main.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -154,59 +149,59 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
-      <item path="../include/Art.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="../include/CocktailProController.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="../include/Dosierstation.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="../include/Entleerer.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="../include/MischbaresRezeptbuch.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="../include/Mischer.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="../include/ObserverWaage.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="../include/Rezeptbuch.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="../include/RezeptbuchTest.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="../include/Simulation.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="../include/Stampfer.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="../include/SubjectWaage.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="../include/UserInterface.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="../include/Waage.h" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="../src/Art.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../src/Art.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="../src/CocktailProController.cpp" ex="false" tool="1" flavor2="0">
       </item>
+      <item path="../src/CocktailProController.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="../src/Dosierstation.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../src/Dosierstation.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="../src/Entleerer.cpp" ex="false" tool="1" flavor2="0">
       </item>
+      <item path="../src/Entleerer.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="../src/MischbaresRezeptbuch.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../src/MischbaresRezeptbuch.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="../src/Mischer.cpp" ex="false" tool="1" flavor2="0">
       </item>
+      <item path="../src/Mischer.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="../src/ObserverWaage.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../src/ObserverWaage.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../src/Rezeptbuch.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="../src/RezeptbuchTest.cpp" ex="false" tool="1" flavor2="0">
       </item>
+      <item path="../src/RezeptbuchTest.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="../src/Simulation.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../src/Simulation.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="../src/Stampfer.cpp" ex="false" tool="1" flavor2="0">
       </item>
+      <item path="../src/Stampfer.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="../src/SubjectWaage.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../src/SubjectWaage.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="../src/UserInterface.cpp" ex="false" tool="1" flavor2="0">
       </item>
+      <item path="../src/UserInterface.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="../src/Waage.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../src/Waage.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="../src/main.cpp" ex="false" tool="1" flavor2="0">
       </item>

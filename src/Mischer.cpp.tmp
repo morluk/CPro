@@ -1,0 +1,39 @@
+
+#__FILE__ _"/home/ldapusers/istlukoeh/swe_workspace/UML/../src/Mischer.cpp" 0
+//@(#) Mischer.cpp
+
+
+                   
+#__FILE__ _"/home/ldapusers/istlukoeh/swe_workspace/UML/../src/Mischer.h" 0
+//@(#) Mischer.h
+
+                   
+                   
+
+//Mischt fuer eine vorgegebene Zeit
+class Mischer
+{
+	
+public:
+	//
+	Mischer();
+	//
+	void mix(int dauer);
+	
+};
+
+      
+
+#__FILE__ _"/home/ldapusers/istlukoeh/swe_workspace/UML/../src/Mischer.cpp" 4
+//
+Mischer::Mischer()
+{
+	
+}
+
+//
+void Mischer::mix(int dauer)
+{
+	
+}
+

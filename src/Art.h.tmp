@@ -1,0 +1,20 @@
+
+#__FILE__ _"/home/ldapusers/istlukoeh/swe_workspace/UML/../src/Art.h" 0
+//@(#) Art.h
+
+               
+               
+
+//
+enum Art
+{
+	//
+	fest,
+	//
+	fluessig,
+	//
+	eis
+	
+};
+
+      

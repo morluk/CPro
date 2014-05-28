@@ -1,0 +1,1058 @@
+
+#__FILE__ _"/home/ldapusers/istlukoeh/swe_workspace/UML/../src/CocktailProController.cpp" 0
+//@(#) CocktailProController.cpp
+
+
+                                 
+#__FILE__ _"/home/ldapusers/istlukoeh/swe_workspace/UML/../src/CocktailProController.h" 0
+//@(#) CocktailProController.h
+
+                                 
+                                 
+
+                         
+#__FILE__ _"/home/ldapusers/istlukoeh/swe_workspace/UML/../src/ObserverWaage.h" 0
+//@(#) ObserverWaage.h
+
+                         
+                         
+
+//Abstrakter Observer des Observer Patterns
+class ObserverWaage
+{
+	
+public:
+	//
+	ObserverWaage();
+	//
+	virtual void update() = 0;
+	//
+	virtual ~ObserverWaage();
+	
+};
+
+      
+
+#__FILE__ _"/home/ldapusers/istlukoeh/swe_workspace/UML/../src/CocktailProController.h" 9
+                  
+                 
+#__FILE__ _"/home/ldapusers/istlukoeh/swe_workspace/UML/../src/Waage.h" 0
+//@(#) Waage.h
+
+                 
+                 
+
+                         
+#__FILE__ _"/home/ldapusers/istlukoeh/swe_workspace/UML/../src/ObserverWaage.h" 0
+//@(#) ObserverWaage.h
+
+                         
+                         
+
+                                           
+                   
+ 
+	
+       
+	  
+	                
+	  
+	                          
+	  
+	                         
+	
+  
+
+      
+
+#__FILE__ _"/home/ldapusers/istlukoeh/swe_workspace/UML/../src/Waage.h" 9
+                        
+#__FILE__ _"/home/ldapusers/istlukoeh/swe_workspace/UML/../src/SubjectWaage.h" 0
+//@(#) SubjectWaage.h
+
+                        
+                        
+
+                
+                         
+#__FILE__ _"/home/ldapusers/istlukoeh/swe_workspace/UML/../src/ObserverWaage.h" 0
+//@(#) ObserverWaage.h
+
+                         
+                         
+
+                                           
+                   
+ 
+	
+       
+	  
+	                
+	  
+	                          
+	  
+	                         
+	
+  
+
+      
+
+#__FILE__ _"/home/ldapusers/istlukoeh/swe_workspace/UML/../src/SubjectWaage.h" 10
+
+using namespace std;
+
+//Abstraktes Subjekt des Observer Patterns.
+class SubjectWaage
+{
+	
+public:
+	//
+	virtual void attach(const ObserverWaage * client) = 0;
+	//
+	virtual void detach(const ObserverWaage * client) = 0;
+	//
+	virtual void notify() = 0;
+	//
+	SubjectWaage();
+	//
+	virtual ~SubjectWaage();
+	
+private:
+	//
+	std::vector<ObserverWaage *> observerWaage;
+	
+};
+
+      
+
+#__FILE__ _"/home/ldapusers/istlukoeh/swe_workspace/UML/../src/Waage.h" 10
+
+//Wird kontrolliert von Simulation und ermittelt das Gewicht des Mischbehaelters. Ueber notify() werden die Observer angestoßen.
+class Waage: SubjectWaage
+{
+public:
+	//
+	void decrement();
+	//
+	int getAbsolutGewicht() const;
+	//
+	int getDeltaGewicht() const;
+	//
+	void increment(int step);
+	//
+	void notify();
+	//
+	void resetDeltaGewicht();
+	//
+	virtual void attach(const ObserverWaage * client);
+	//
+	virtual void detach(const ObserverWaage * client);
+	//
+	Waage();
+	
+private:
+	//
+	int absolutGewicht;
+	
+	//
+	int deltaGewicht;
+	
+	
+};
+
+      
+
+#__FILE__ _"/home/ldapusers/istlukoeh/swe_workspace/UML/../src/CocktailProController.h" 11
+                
+                
+                         
+#__FILE__ _"/home/ldapusers/istlukoeh/swe_workspace/UML/../src/Dosierstation.h" 0
+//@(#) Dosierstation.h
+
+                         
+                         
+
+                         
+#__FILE__ _"/home/ldapusers/istlukoeh/swe_workspace/UML/../src/ObserverWaage.h" 0
+//@(#) ObserverWaage.h
+
+                         
+                         
+
+                                           
+                   
+ 
+	
+       
+	  
+	                
+	  
+	                          
+	  
+	                         
+	
+  
+
+      
+
+#__FILE__ _"/home/ldapusers/istlukoeh/swe_workspace/UML/../src/Dosierstation.h" 9
+                 
+#__FILE__ _"/home/ldapusers/istlukoeh/swe_workspace/UML/../src/Waage.h" 0
+//@(#) Waage.h
+
+                 
+                 
+
+                          
+                         
+
+                                                                                                                                
+                         
+ 
+       
+	  
+	                 
+	  
+	                              
+	  
+	                            
+	  
+	                         
+	  
+	              
+	  
+	                         
+	  
+	                                                  
+	  
+	                                                  
+	  
+	        
+	
+        
+	  
+	                   
+	
+	  
+	                 
+	
+	
+  
+
+      
+
+#__FILE__ _"/home/ldapusers/istlukoeh/swe_workspace/UML/../src/Dosierstation.h" 10
+               
+#__FILE__ _"/home/ldapusers/istlukoeh/swe_workspace/UML/../src/Art.h" 0
+//@(#) Art.h
+
+               
+               
+
+//
+enum Art
+{
+	//
+	fest,
+	//
+	fluessig,
+	//
+	eis
+	
+};
+
+      
+
+#__FILE__ _"/home/ldapusers/istlukoeh/swe_workspace/UML/../src/Dosierstation.h" 11
+                      
+#__FILE__ _"/home/ldapusers/istlukoeh/swe_workspace/UML/../src/Simulation.h" 0
+//@(#) Simulation.h
+
+                      
+                      
+
+                 
+#__FILE__ _"/home/ldapusers/istlukoeh/swe_workspace/UML/../src/Waage.h" 0
+//@(#) Waage.h
+
+                 
+                 
+
+                          
+                         
+
+                                                                                                                                
+                         
+ 
+       
+	  
+	                 
+	  
+	                              
+	  
+	                            
+	  
+	                         
+	  
+	              
+	  
+	                         
+	  
+	                                                  
+	  
+	                                                  
+	  
+	        
+	
+        
+	  
+	                   
+	
+	  
+	                 
+	
+	
+  
+
+      
+
+#__FILE__ _"/home/ldapusers/istlukoeh/swe_workspace/UML/../src/Simulation.h" 9
+               
+#__FILE__ _"/home/ldapusers/istlukoeh/swe_workspace/UML/../src/Art.h" 0
+//@(#) Art.h
+
+               
+               
+
+  
+        
+ 
+	  
+	     
+	  
+	         
+	  
+	   
+	
+  
+
+      
+
+#__FILE__ _"/home/ldapusers/istlukoeh/swe_workspace/UML/../src/Simulation.h" 10
+
+//Simuliert Gewicht das auf die Waage gelegt wird und zaehlt das Attribut Gewicht hoch.
+class Simulation
+{
+	
+public:
+	//
+	void gewichtErhoehen(Art art);
+	//
+	void gewichtReduzieren();
+	//
+	void setWaage(const Waage * waage);
+	//
+	Simulation();
+	//
+	void stop();
+	
+private:
+	//
+	int timeStep;
+	
+	//
+	Waage * waage;
+	
+	//
+	bool waageLaeuft;
+	
+	
+};
+
+      
+
+#__FILE__ _"/home/ldapusers/istlukoeh/swe_workspace/UML/../src/Dosierstation.h" 12
+
+//Oeffnet das Ventil. Schliesst das Ventil, sobald das Gewicht des Mischbehaelters der uebergebenen Grammzahl entspricht. Stoesst Simulation an.
+class Dosierstation: ObserverWaage
+{
+	
+public:
+	//
+	Dosierstation();
+	//
+	Dosierstation(Art art);
+	//
+	void fuelleAb(int menge);
+	//
+	void setSimulation(const Simulation * simulation);
+	//
+	void setWaage(const Waage * waage);
+	//
+	virtual ~Dosierstation();
+	//
+	virtual void update();
+	
+private:
+	//
+	Art art;
+	
+	//
+	int gewichtWaage;
+	
+	//
+	Simulation * simulation;
+	
+	//
+	bool ventil;
+	
+	//
+	Waage * waage;
+	
+	
+
+};
+
+      
+
+#__FILE__ _"/home/ldapusers/istlukoeh/swe_workspace/UML/../src/CocktailProController.h" 14
+                     
+#__FILE__ _"/home/ldapusers/istlukoeh/swe_workspace/UML/../src/Entleerer.h" 0
+//@(#) Entleerer.h
+
+                     
+                     
+
+                         
+#__FILE__ _"/home/ldapusers/istlukoeh/swe_workspace/UML/../src/ObserverWaage.h" 0
+//@(#) ObserverWaage.h
+
+                         
+                         
+
+                                           
+                   
+ 
+	
+       
+	  
+	                
+	  
+	                          
+	  
+	                         
+	
+  
+
+      
+
+#__FILE__ _"/home/ldapusers/istlukoeh/swe_workspace/UML/../src/Entleerer.h" 9
+                 
+#__FILE__ _"/home/ldapusers/istlukoeh/swe_workspace/UML/../src/Waage.h" 0
+//@(#) Waage.h
+
+                 
+                 
+
+                          
+                         
+
+                                                                                                                                
+                         
+ 
+       
+	  
+	                 
+	  
+	                              
+	  
+	                            
+	  
+	                         
+	  
+	              
+	  
+	                         
+	  
+	                                                  
+	  
+	                                                  
+	  
+	        
+	
+        
+	  
+	                   
+	
+	  
+	                 
+	
+	
+  
+
+      
+
+#__FILE__ _"/home/ldapusers/istlukoeh/swe_workspace/UML/../src/Entleerer.h" 10
+                      
+#__FILE__ _"/home/ldapusers/istlukoeh/swe_workspace/UML/../src/Simulation.h" 0
+//@(#) Simulation.h
+
+                      
+                      
+
+                  
+                
+
+                                                                                       
+                
+ 
+	
+       
+	  
+	                              
+	  
+	                         
+	  
+	                                   
+	  
+	             
+	  
+	            
+	
+        
+	  
+	             
+	
+	  
+	              
+	
+	  
+	                 
+	
+	
+  
+
+      
+
+#__FILE__ _"/home/ldapusers/istlukoeh/swe_workspace/UML/../src/Entleerer.h" 11
+
+//Oeffnet das Ventil des Mischbehaelters. Schliesst das Ventil, sobald das Gewicht des Mischbehaelters 0 ist.
+class Entleerer: ObserverWaage
+{
+	
+public:
+	//
+	void entleereBecher();
+	//
+	Entleerer();
+	//
+	Simulation * getSimulation();
+	//
+	Simulation * initSimulation();
+	//
+	void setWaage(const Waage * waage);
+	//
+	void update();
+	//
+	virtual ~Entleerer();
+	
+private:
+	//
+	int gewichtWaage;
+	
+	//
+	Simulation * simulation;
+	
+	//
+	bool ventilOpen;
+	
+	//
+	Waage * waage;
+	
+	
+};
+
+      
+
+#__FILE__ _"/home/ldapusers/istlukoeh/swe_workspace/UML/../src/CocktailProController.h" 15
+                                
+#__FILE__ _"/home/ldapusers/istlukoeh/swe_workspace/UML/../src/MischbaresRezeptbuch.h" 0
+//@(#) MischbaresRezeptbuch.h
+
+                                
+                                
+
+                  
+                      
+#__FILE__ _"/home/ldapusers/istlukoeh/swe_workspace/UML/../src/Rezeptbuch.h" 0
+/**********************************************************************************/
+/*                                Deklarationsmodul                               */
+/**********************************************************************************/
+/* 
+ * generiert mit MagicDraw
+ *
+ * erstellt am: 04.10.2013  14:49:08
+ * Repository : RezeptbuchV5
+ * Modell     : Rezeptbuch
+ * Benutzer   : RaHa 
+ * File       : Rezeptbuch.h
+ *
+ */
+
+
+                         
+                         
+
+              
+                
+
+using namespace std;
+
+
+/*Jeder Rezeptsschritt hat eine Zutat und eine Menge. Das wird frei interpretiert, d.h. eine Zutat kann auch "Mixen" sein. Die Menge bezieht sich dann auf die Zeit (20 = 20 Sekunden)
+ */
+class Rezeptschritt
+{
+   /*Der Name der Zutat */
+	string m_Zutat;
+   
+   /*Die Menge der Zutat - das können Sekunden, Stück oder Gramm sein */
+	float m_Menge;
+   
+   public:
+	/*Konstruktor */
+	Rezeptschritt( void );
+   
+   /*Destruktor */
+	virtual ~Rezeptschritt( );
+   
+   /*Liefert die Zutat des Rezeptschrittes */
+	virtual string getZutat( void ) const;
+   
+   /*Liefert den Wert des Rezeptschrittes (die Menge) */
+	virtual float getMenge( void ) const;
+   
+   /*Setzt die Zutat des Rezeptschrittes */
+	virtual void setZutat( string m_Zutat );
+   
+   /*Setzt den Wert des Rezeptschrittes (die Menge) */
+	virtual void setMenge( float m_Menge );
+   
+};
+
+
+/*Ein Rezept hat einen Namen und verwaltet eine beliebig lange Liste von Rezeptschritten.
+ */
+class Rezept
+{
+   /*Jedes Rezept besteht aus vielen Rezeptschritten. Die werden hier (geordnet) in einer Liste abgelegt.
+	 */
+	list<Rezeptschritt> m_Rezeptschritte;
+   
+   /*Der Name des Rezeptes	 */
+	string m_Name;
+   
+   public:
+	/*Konstruktor - legt ein Rezept an. */
+	Rezept( void );
+   
+   /*Destruktor. Löscht ein Rezept inklusive der enthaltenen Rezeprtschritte. */
+	virtual ~Rezept( );
+
+   
+   /*Liefert die Anzahl der Rezeptschritte */
+	virtual int getAnzahlRezeptschritte( );
+
+   /*Liefert einen Verweis auf den i-ten Rezeptschritt (0..n-1).
+	 *Sonst wird eine NULL geliefert.
+	 */
+	virtual Rezeptschritt * getRezeptSchritt( unsigned int i );
+   
+   /*Liefert den Namen des Rezeptes */
+	virtual string getName( void ) const;
+   
+   /*Setzt den Namen des Rezeptes */
+	virtual void setName( string Name );
+
+   /*Erzeugt einen neuen Rezeptschritt mit der übergebenen Zutat und der Menge und hängt den an die Liste der Schritte an.
+	 */
+	virtual void append( string z, float m );
+   
+};
+
+/*Das Rezeptbuch kennt eine Liste von Rezepten. Es bietet die Möglichkeit Rezepte zu suchen und abzufragen. Das Initialisieren der Rezepte erfolgt über den Dateileser. 
+ */
+class Rezeptbuch
+{
+   /*Ein Rezeptbuch besteht aus vielen Rezepten - diese werden als eine Liste abgelegt.
+	 */
+	list<Rezept *> m_Rezepte;
+
+   public:
+	/*Konstruktor; legt temporär einen Initialisierer an, damit dieser die Liste auffüllt.
+	 */
+	Rezeptbuch( void );
+   
+   /*Destruktor. Löscht insbesondere den Initialisierer */
+	virtual ~Rezeptbuch( );
+   
+   /*Liefert die Anzahl der verfügbaren Rezepte. */
+	virtual int getAnzahlRezepte( );
+
+   /*Liefert das i-te Rezept aus der Liste (Werte von 0..n-1).
+	 *Ansonsten NULL.
+	 */
+	virtual Rezept * getRezept( unsigned int i );
+   /*Löscht das i-te Rezept. Liefert bei Erfolg true, sonst false. */
+	virtual bool deleteRezept( unsigned int i );  
+   
+
+};
+
+      
+
+#__FILE__ _"/home/ldapusers/istlukoeh/swe_workspace/UML/../src/MischbaresRezeptbuch.h" 10
+                 
+                  
+                 
+                
+              
+
+using namespace std;
+
+//Ermittelt aus Rezeptbuch und vorhandenen Dosierstationen die tatsaechlich mischbaren Rezepte
+class MischbaresRezeptbuch: public Rezeptbuch
+{
+	
+public:
+	//Liefert die Anzahl der verfügbaren Rezepte. 
+	virtual int getAnzahlRezepte() {
+		return mischbareRezepte.size();
+	}
+
+	//Liefert das i-te Rezept aus der Liste (Werte von 0..n-1).
+	//Ansonsten NULL.
+	// 
+	virtual Rezept * getRezept(unsigned int i);
+
+	//Löscht das i-te Rezept. Liefert bei Erfolg true, sonst false. 
+	virtual bool deleteRezept(unsigned int i);
+
+	//
+	MischbaresRezeptbuch();
+	
+private:
+	//ermittelt aus Rezeptbuch die mischbaren Rezepte
+	void calculateMischbareRezepte();
+
+	//durchlaeuft ZutatenListe und gibt zurueck ob Zutat vorhanden ist
+	bool istZutatVorhanden(std::string zutat);
+
+	// oeffnet eine Datei, schreibt den Text in die uebergebene String-Liste,
+	// liefert die Anzahl der gelesenen Zeilen zurueck
+	int readZutatenListe(std::list<std::string> * lines, std::string FileName);
+
+	//
+	std::vector<Rezept *> mischbareRezepte;
+	
+	//
+	std::list<std::string> zutaten;
+};
+
+      
+
+#__FILE__ _"/home/ldapusers/istlukoeh/swe_workspace/UML/../src/CocktailProController.h" 16
+                   
+#__FILE__ _"/home/ldapusers/istlukoeh/swe_workspace/UML/../src/Mischer.h" 0
+//@(#) Mischer.h
+
+                   
+                   
+
+//Mischt fuer eine vorgegebene Zeit
+class Mischer
+{
+	
+public:
+	//
+	Mischer();
+	//
+	void mix(int dauer);
+	
+};
+
+      
+
+#__FILE__ _"/home/ldapusers/istlukoeh/swe_workspace/UML/../src/CocktailProController.h" 17
+                    
+#__FILE__ _"/home/ldapusers/istlukoeh/swe_workspace/UML/../src/Stampfer.h" 0
+//@(#) Stampfer.h
+
+                    
+                    
+
+//Stampft fuer eine bestimmte Zeit
+class Stampfer
+{
+	
+public:
+	//
+	void stampfe(int dauer);
+	//
+	Stampfer();
+	
+};
+
+      
+
+#__FILE__ _"/home/ldapusers/istlukoeh/swe_workspace/UML/../src/CocktailProController.h" 18
+                         
+#__FILE__ _"/home/ldapusers/istlukoeh/swe_workspace/UML/../src/UserInterface.h" 0
+//@(#) UserInterface.h
+
+                         
+                         
+
+                         
+#__FILE__ _"/home/ldapusers/istlukoeh/swe_workspace/UML/../src/ObserverWaage.h" 0
+//@(#) ObserverWaage.h
+
+                         
+                         
+
+                                           
+                   
+ 
+	
+       
+	  
+	                
+	  
+	                          
+	  
+	                         
+	
+  
+
+      
+
+#__FILE__ _"/home/ldapusers/istlukoeh/swe_workspace/UML/../src/UserInterface.h" 9
+                 
+#__FILE__ _"/home/ldapusers/istlukoeh/swe_workspace/UML/../src/Waage.h" 0
+//@(#) Waage.h
+
+                 
+                 
+
+                          
+                         
+
+                                                                                                                                
+                         
+ 
+       
+	  
+	                 
+	  
+	                              
+	  
+	                            
+	  
+	                         
+	  
+	              
+	  
+	                         
+	  
+	                                                  
+	  
+	                                                  
+	  
+	        
+	
+        
+	  
+	                   
+	
+	  
+	                 
+	
+	
+  
+
+      
+
+#__FILE__ _"/home/ldapusers/istlukoeh/swe_workspace/UML/../src/UserInterface.h" 10
+                                 
+#__FILE__ _"/home/ldapusers/istlukoeh/swe_workspace/UML/../src/CocktailProController.h" 0
+//@(#) CocktailProController.h
+
+                                 
+                                 
+
+                          
+                   
+                  
+                 
+                 
+                          
+                      
+                                 
+                    
+                     
+                          
+
+                    
+
+                                                 
+                    
+
+                                                                                                
+                           
+ 
+       
+	  
+	                        
+	  
+	                                                     
+	  
+	                                       
+	  
+	                             
+	
+        
+	  
+	                                         
+	
+	  
+	                    
+	
+	  
+	                                          
+	
+	  
+	                
+	
+	  
+	                  
+	
+	  
+	                              
+	
+	  
+	            
+	
+	  
+	            
+  
+
+      
+
+#__FILE__ _"/home/ldapusers/istlukoeh/swe_workspace/UML/../src/UserInterface.h" 11
+
+//Legt Komponenten (Dosierstation, Stampfer, ..) an und koordiniert sie durch die Rezeptschritte
+class CocktailProController;
+
+//Input Output UserInterface. Konsolenapplikation
+class UserInterface: ObserverWaage
+{
+public:
+	//
+	void setWaage(const Waage * waage);
+	//
+	void showMenu();
+	//
+	void update();
+	//
+	UserInterface();
+	//
+	virtual ~UserInterface();
+	
+private:
+	//
+	CocktailProController * cocktailProController;
+	
+	//
+	Waage * waage;
+	
+};
+
+      
+
+#__FILE__ _"/home/ldapusers/istlukoeh/swe_workspace/UML/../src/CocktailProController.h" 19
+
+using namespace std;
+
+//Input Output UserInterface. Konsolenapplikation
+class UserInterface;
+
+//Legt Komponenten (Dosierstation, Stampfer, ..) an und koordiniert sie durch die Rezeptschritte
+class CocktailProController
+{
+public:
+	//
+	CocktailProController();
+	//
+	CocktailProController(UserInterface * userinterface);
+	//
+	std::string mischbareRezepteToString();
+	//
+	void mischeRezept(int index);
+	
+private:
+	//
+	std::vector<Dosierstation> dosierstation;
+	
+	//
+	Entleerer entleerer;
+	
+	//
+	MischbaresRezeptbuch mischbaresRezeptbuch;
+	
+	//
+	Mischer mischer;
+	
+	//
+	Stampfer stampfer;
+	
+	//
+	UserInterface * userInterface;
+	
+	//
+	Waage waage;
+	
+	//
+	void init();
+};
+
+      
+
+#__FILE__ _"/home/ldapusers/istlukoeh/swe_workspace/UML/../src/CocktailProController.cpp" 4
+//
+void CocktailProController::mischeRezept(int index)
+{
+	
+}
+
+//
+std::string CocktailProController::mischbareRezepteToString()
+{
+	return std::string();
+}
+
+//
+CocktailProController::CocktailProController(UserInterface * userinterface)
+{
+	
+}
+
+//
+void CocktailProController::init()
+{
+	
+}
+
+//
+CocktailProController::CocktailProController() {
+
+}

@@ -5,7 +5,7 @@
  *      Author: gugugs
  */
 
-#include <RezeptbuchTest.h>
+#include "RezeptbuchTest.h"
 
 RezeptbuchTest::RezeptbuchTest() :
 		CppUnit::TestCase("mischbaresRezeptbuch") {

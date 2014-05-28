@@ -7,14 +7,15 @@
 #include "Waage.h"
 #include "CocktailProController.h"
 
+//Legt Komponenten (Dosierstation, Stampfer, ..) an und koordiniert sie durch die Rezeptschritte
 class CocktailProController;
 
 //Input Output UserInterface. Konsolenapplikation
-class UserInterface : ObserverWaage
+class UserInterface: ObserverWaage
 {
 public:
 	//
-	void setWaage(const Waage* waage);
+	void setWaage(const Waage * waage);
 	//
 	void showMenu();
 	//
@@ -26,10 +27,10 @@ public:
 	
 private:
 	//
-	CocktailProController* cocktailProController;
+	CocktailProController * cocktailProController;
 	
 	//
-    Waage* waage;
+	Waage * waage;
 	
 };
 

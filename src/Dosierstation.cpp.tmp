@@ -1,0 +1,377 @@
+
+#__FILE__ _"/home/ldapusers/istlukoeh/swe_workspace/UML/../src/Dosierstation.cpp" 0
+//@(#) Dosierstation.cpp
+
+
+                         
+#__FILE__ _"/home/ldapusers/istlukoeh/swe_workspace/UML/../src/Dosierstation.h" 0
+//@(#) Dosierstation.h
+
+                         
+                         
+
+                         
+#__FILE__ _"/home/ldapusers/istlukoeh/swe_workspace/UML/../src/ObserverWaage.h" 0
+//@(#) ObserverWaage.h
+
+                         
+                         
+
+//Abstrakter Observer des Observer Patterns
+class ObserverWaage
+{
+	
+public:
+	//
+	ObserverWaage();
+	//
+	virtual void update() = 0;
+	//
+	virtual ~ObserverWaage();
+	
+};
+
+      
+
+#__FILE__ _"/home/ldapusers/istlukoeh/swe_workspace/UML/../src/Dosierstation.h" 9
+                 
+#__FILE__ _"/home/ldapusers/istlukoeh/swe_workspace/UML/../src/Waage.h" 0
+//@(#) Waage.h
+
+                 
+                 
+
+                         
+#__FILE__ _"/home/ldapusers/istlukoeh/swe_workspace/UML/../src/ObserverWaage.h" 0
+//@(#) ObserverWaage.h
+
+                         
+                         
+
+                                           
+                   
+ 
+	
+       
+	  
+	                
+	  
+	                          
+	  
+	                         
+	
+  
+
+      
+
+#__FILE__ _"/home/ldapusers/istlukoeh/swe_workspace/UML/../src/Waage.h" 9
+                        
+#__FILE__ _"/home/ldapusers/istlukoeh/swe_workspace/UML/../src/SubjectWaage.h" 0
+//@(#) SubjectWaage.h
+
+                        
+                        
+
+                
+                         
+#__FILE__ _"/home/ldapusers/istlukoeh/swe_workspace/UML/../src/ObserverWaage.h" 0
+//@(#) ObserverWaage.h
+
+                         
+                         
+
+                                           
+                   
+ 
+	
+       
+	  
+	                
+	  
+	                          
+	  
+	                         
+	
+  
+
+      
+
+#__FILE__ _"/home/ldapusers/istlukoeh/swe_workspace/UML/../src/SubjectWaage.h" 10
+
+using namespace std;
+
+//Abstraktes Subjekt des Observer Patterns.
+class SubjectWaage
+{
+	
+public:
+	//
+	virtual void attach(const ObserverWaage * client) = 0;
+	//
+	virtual void detach(const ObserverWaage * client) = 0;
+	//
+	virtual void notify() = 0;
+	//
+	SubjectWaage();
+	//
+	virtual ~SubjectWaage();
+	
+private:
+	//
+	std::vector<ObserverWaage *> observerWaage;
+	
+};
+
+      
+
+#__FILE__ _"/home/ldapusers/istlukoeh/swe_workspace/UML/../src/Waage.h" 10
+
+//Wird kontrolliert von Simulation und ermittelt das Gewicht des Mischbehaelters. Ueber notify() werden die Observer angestoßen.
+class Waage: SubjectWaage
+{
+public:
+	//
+	void decrement();
+	//
+	int getAbsolutGewicht() const;
+	//
+	int getDeltaGewicht() const;
+	//
+	void increment(int step);
+	//
+	void notify();
+	//
+	void resetDeltaGewicht();
+	//
+	virtual void attach(const ObserverWaage * client);
+	//
+	virtual void detach(const ObserverWaage * client);
+	//
+	Waage();
+	
+private:
+	//
+	int absolutGewicht;
+	
+	//
+	int deltaGewicht;
+	
+	
+};
+
+      
+
+#__FILE__ _"/home/ldapusers/istlukoeh/swe_workspace/UML/../src/Dosierstation.h" 10
+               
+#__FILE__ _"/home/ldapusers/istlukoeh/swe_workspace/UML/../src/Art.h" 0
+//@(#) Art.h
+
+               
+               
+
+//
+enum Art
+{
+	//
+	fest,
+	//
+	fluessig,
+	//
+	eis
+	
+};
+
+      
+
+#__FILE__ _"/home/ldapusers/istlukoeh/swe_workspace/UML/../src/Dosierstation.h" 11
+                      
+#__FILE__ _"/home/ldapusers/istlukoeh/swe_workspace/UML/../src/Simulation.h" 0
+//@(#) Simulation.h
+
+                      
+                      
+
+                 
+#__FILE__ _"/home/ldapusers/istlukoeh/swe_workspace/UML/../src/Waage.h" 0
+//@(#) Waage.h
+
+                 
+                 
+
+                          
+                         
+
+                                                                                                                                
+                         
+ 
+       
+	  
+	                 
+	  
+	                              
+	  
+	                            
+	  
+	                         
+	  
+	              
+	  
+	                         
+	  
+	                                                  
+	  
+	                                                  
+	  
+	        
+	
+        
+	  
+	                   
+	
+	  
+	                 
+	
+	
+  
+
+      
+
+#__FILE__ _"/home/ldapusers/istlukoeh/swe_workspace/UML/../src/Simulation.h" 9
+               
+#__FILE__ _"/home/ldapusers/istlukoeh/swe_workspace/UML/../src/Art.h" 0
+//@(#) Art.h
+
+               
+               
+
+  
+        
+ 
+	  
+	     
+	  
+	         
+	  
+	   
+	
+  
+
+      
+
+#__FILE__ _"/home/ldapusers/istlukoeh/swe_workspace/UML/../src/Simulation.h" 10
+
+//Simuliert Gewicht das auf die Waage gelegt wird und zaehlt das Attribut Gewicht hoch.
+class Simulation
+{
+	
+public:
+	//
+	void gewichtErhoehen(Art art);
+	//
+	void gewichtReduzieren();
+	//
+	void setWaage(const Waage * waage);
+	//
+	Simulation();
+	//
+	void stop();
+	
+private:
+	//
+	int timeStep;
+	
+	//
+	Waage * waage;
+	
+	//
+	bool waageLaeuft;
+	
+	
+};
+
+      
+
+#__FILE__ _"/home/ldapusers/istlukoeh/swe_workspace/UML/../src/Dosierstation.h" 12
+
+//Oeffnet das Ventil. Schliesst das Ventil, sobald das Gewicht des Mischbehaelters der uebergebenen Grammzahl entspricht. Stoesst Simulation an.
+class Dosierstation: ObserverWaage
+{
+	
+public:
+	//
+	Dosierstation();
+	//
+	Dosierstation(Art art);
+	//
+	void fuelleAb(int menge);
+	//
+	void setSimulation(const Simulation * simulation);
+	//
+	void setWaage(const Waage * waage);
+	//
+	virtual ~Dosierstation();
+	//
+	virtual void update();
+	
+private:
+	//
+	Art art;
+	
+	//
+	int gewichtWaage;
+	
+	//
+	Simulation * simulation;
+	
+	//
+	bool ventil;
+	
+	//
+	Waage * waage;
+	
+	
+
+};
+
+      
+
+#__FILE__ _"/home/ldapusers/istlukoeh/swe_workspace/UML/../src/Dosierstation.cpp" 4
+//
+void Dosierstation::setWaage(const Waage * waage)
+{
+	
+}
+
+//
+void Dosierstation::setSimulation(const Simulation * simulation)
+{
+	
+}
+
+//
+void Dosierstation::fuelleAb(int menge)
+{
+	
+}
+
+//
+Dosierstation::Dosierstation(Art art)
+{
+
+}
+
+//
+Dosierstation::Dosierstation()
+{
+
+}
+
+//
+Dosierstation::~Dosierstation() {
+
+}
+
+//
+void Dosierstation::update() {
+
+}

@@ -3,6 +3,8 @@
 #ifndef DOSIERSTATION_H_H
 #define DOSIERSTATION_H_H
 
+#include "ObserverWaage.h"
+#include "Waage.h"
 #include "Art.h"
 #include "Simulation.h"
 
@@ -18,9 +20,9 @@ public:
 	//
 	void fuelleAb(int menge);
 	//
-	void setSimulation(const Simulation* simulation);
+	void setSimulation(const Simulation * simulation);
 	//
-	void setWaage(const Waage* waage);
+	void setWaage(const Waage * waage);
 	//
 	virtual ~Dosierstation();
 	//
@@ -43,6 +45,7 @@ private:
 	Waage * waage;
 	
 	
+
 };
 
 #endif

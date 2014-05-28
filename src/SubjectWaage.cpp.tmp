@@ -1,0 +1,75 @@
+
+#__FILE__ _"/home/ldapusers/istlukoeh/swe_workspace/UML/../src/SubjectWaage.cpp" 0
+//@(#) SubjectWaage.cpp
+
+
+                        
+#__FILE__ _"/home/ldapusers/istlukoeh/swe_workspace/UML/../src/SubjectWaage.h" 0
+//@(#) SubjectWaage.h
+
+                        
+                        
+
+                
+                         
+#__FILE__ _"/home/ldapusers/istlukoeh/swe_workspace/UML/../src/ObserverWaage.h" 0
+//@(#) ObserverWaage.h
+
+                         
+                         
+
+//Abstrakter Observer des Observer Patterns
+class ObserverWaage
+{
+	
+public:
+	//
+	ObserverWaage();
+	//
+	virtual void update() = 0;
+	//
+	virtual ~ObserverWaage();
+	
+};
+
+      
+
+#__FILE__ _"/home/ldapusers/istlukoeh/swe_workspace/UML/../src/SubjectWaage.h" 10
+
+using namespace std;
+
+//Abstraktes Subjekt des Observer Patterns.
+class SubjectWaage
+{
+	
+public:
+	//
+	virtual void attach(const ObserverWaage * client) = 0;
+	//
+	virtual void detach(const ObserverWaage * client) = 0;
+	//
+	virtual void notify() = 0;
+	//
+	SubjectWaage();
+	//
+	virtual ~SubjectWaage();
+	
+private:
+	//
+	std::vector<ObserverWaage *> observerWaage;
+	
+};
+
+      
+
+#__FILE__ _"/home/ldapusers/istlukoeh/swe_workspace/UML/../src/SubjectWaage.cpp" 4
+//
+SubjectWaage::SubjectWaage()
+{
+	
+}
+
+//
+SubjectWaage::~SubjectWaage() {
+
+}

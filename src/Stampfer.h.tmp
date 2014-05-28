@@ -1,0 +1,20 @@
+
+#__FILE__ _"/home/ldapusers/istlukoeh/swe_workspace/UML/../src/Stampfer.h" 0
+//@(#) Stampfer.h
+
+                    
+                    
+
+//Stampft fuer eine bestimmte Zeit
+class Stampfer
+{
+	
+public:
+	//
+	void stampfe(int dauer);
+	//
+	Stampfer();
+	
+};
+
+      

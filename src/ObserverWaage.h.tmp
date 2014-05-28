@@ -1,0 +1,22 @@
+
+#__FILE__ _"/home/ldapusers/istlukoeh/swe_workspace/UML/../src/ObserverWaage.h" 0
+//@(#) ObserverWaage.h
+
+                         
+                         
+
+//Abstrakter Observer des Observer Patterns
+class ObserverWaage
+{
+	
+public:
+	//
+	ObserverWaage();
+	//
+	virtual void update() = 0;
+	//
+	virtual ~ObserverWaage();
+	
+};
+
+      

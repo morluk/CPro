@@ -3,6 +3,7 @@
 #ifndef ENTLEERER_H_H
 #define ENTLEERER_H_H
 
+#include "ObserverWaage.h"
 #include "Waage.h"
 #include "Simulation.h"
 
@@ -16,11 +17,11 @@ public:
 	//
 	Entleerer();
 	//
-	Simulation* getSimulation();
+	Simulation * getSimulation();
 	//
-	Simulation* initSimulation();
+	Simulation * initSimulation();
 	//
-	void setWaage(const Waage* waage);
+	void setWaage(const Waage * waage);
 	//
 	void update();
 	//

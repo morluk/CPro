@@ -16,7 +16,7 @@ public:
 	//
 	void gewichtReduzieren();
 	//
-	void setWaage(const Waage* waage);
+	void setWaage(const Waage * waage);
 	//
 	Simulation();
 	//

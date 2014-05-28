@@ -14,9 +14,9 @@ class SubjectWaage
 	
 public:
 	//
-	virtual void attach(const ObserverWaage* client) = 0;
+	virtual void attach(const ObserverWaage * client) = 0;
 	//
-	virtual void detach(const ObserverWaage* client) = 0;
+	virtual void detach(const ObserverWaage * client) = 0;
 	//
 	virtual void notify() = 0;
 	//
@@ -26,7 +26,7 @@ public:
 	
 private:
 	//
-	vector<ObserverWaage*> observerWaage;
+	std::vector<ObserverWaage *> observerWaage;
 	
 };
 
