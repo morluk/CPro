@@ -292,22 +292,32 @@ public class Hal extends Thread {
 		case "DUMPREG":
 			int physAdrSeite = -1;
 			System.out.println("===DUMPREG Kanal 1===");
-			for (int i=0; i<(hd.getDataSeitenCount()*1024);i+=1024) {
-				physAdrSeite = this.getPhysAdrOfDataSeg(i);
+//			for (int i=0; i<(hd.getDataSeitenCount()*1024);i+=1024) {
+//				physAdrSeite = this.getPhysAdrOfDataSeg(i);
+//				for (int j=0; j<1024; j++) {
+//					System.out.println((i+j) + " : " + register.get(physAdrSeite/1024).seite[j]);
+////					ioUnits.get(1).put(register.get(physAdrSeite/1024).seite[j]);
+//				}
+//			}
+			for (int i=0; i<register.size();i++) {
 				for (int j=0; j<1024; j++) {
-					System.out.println((i+j) + " : " + register.get(physAdrSeite/1024).seite[j]);
-//					ioUnits.get(1).put(register.get(physAdrSeite/1024).seite[j]);
+					System.out.println((i*1024+j) + " : " + register.get(i).seite[j]);
 				}
 			}
 			break;
 		case "DUMPPROG":
 			int physAdrSeite1 = -1;
 			System.out.println("===DUMPPROG Kanal 2===");
-			for (int i=0; i<(hd.getTextSeitenCount()*1024);i+=1024) {
-				physAdrSeite1 = this.getPhysAdrOfTextSeg(i);
+//			for (int i=0; i<(hd.getTextSeitenCount()*1024);i+=1024) {
+//				physAdrSeite1 = this.getPhysAdrOfTextSeg(i);
+//				for (int j=0; j<1024; j++) {
+//					System.out.println((i+j) + " : " + programmspeicher.get(physAdrSeite1/1024).seite[j]);
+////					ioUnits.get(2).put(programmspeicher.get(physAdrSeite/1024).seite[j]);
+//				}
+//			}
+			for (int i=0; i<programmspeicher.size();i++) {
 				for (int j=0; j<1024; j++) {
-					System.out.println((i+j) + " : " + programmspeicher.get(physAdrSeite1/1024).seite[j]);
-//					ioUnits.get(2).put(programmspeicher.get(physAdrSeite/1024).seite[j]);
+					System.out.println((i*1024+j) + " : " + programmspeicher.get(i).seite[j]);
 				}
 			}
 			break;
