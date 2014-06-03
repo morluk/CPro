@@ -12,6 +12,7 @@
 #include "Stampfer.h"
 #include "UserInterface.h"
 #include <string>
+#include <iostream>
 #include <vector>
 
 using namespace std;
@@ -31,7 +32,7 @@ public:
 	void mischeRezept(int index);
 
 private:
-	vector<Dosierstation> dosierstation;
+	vector<Dosierstation> dosierstationen;
 
 	Entleerer entleerer;
 

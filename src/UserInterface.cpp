@@ -11,7 +11,7 @@ void UserInterface::setWaage(const Waage* waage) {
 }
 
 UserInterface::UserInterface() {
-	this->cocktailProController = 0;
+	this->cocktailProController = new CocktailProController(this);
 	this->waage = 0;
 }
 

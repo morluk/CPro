@@ -10,7 +10,8 @@ Entleerer::Entleerer() {
 }
 
 Simulation* Entleerer::initSimulation() {
-	return 0;
+	this->simulation = new Simulation();
+	return this->simulation;
 }
 
 void Entleerer::setWaage(const Waage* waage) {

@@ -7,6 +7,9 @@
 #include "Waage.h"
 #include "Art.h"
 #include "Simulation.h"
+#include <string>
+
+using namespace std;
 
 //Oeffnet das Ventil. Schliesst das Ventil, sobald das Gewicht des Mischbehaelters der uebergebenen Grammzahl entspricht. Stoesst Simulation an.
 class Dosierstation: ObserverWaage {
@@ -14,7 +17,7 @@ class Dosierstation: ObserverWaage {
 public:
 	Dosierstation();
 
-	Dosierstation(Art art);
+	Dosierstation(Art art, string name);
 
 	void fuelleAb(int menge);
 
@@ -37,6 +40,7 @@ private:
 
 	Waage* waage;
 
+	string name;
 };
 
 #endif

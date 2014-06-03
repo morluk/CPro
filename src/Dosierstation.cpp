@@ -14,12 +14,13 @@ void Dosierstation::fuelleAb(int menge) {
 
 }
 
-Dosierstation::Dosierstation(Art art) {
+Dosierstation::Dosierstation(Art art, string name) {
 	this->art = art;
 	this->ventil = false;
 	this->waage = 0;
 	this->gewichtWaage = 0;
 	this->simulation = 0;
+	this->name = name;
 }
 
 Dosierstation::Dosierstation() {

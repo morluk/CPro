@@ -1,7 +1,6 @@
 //@(#) MischbaresRezeptbuch.cpp
 
 #include "MischbaresRezeptbuch.h"
-//
 
 MischbaresRezeptbuch::MischbaresRezeptbuch() :
 		Rezeptbuch() {
@@ -14,9 +13,7 @@ MischbaresRezeptbuch::MischbaresRezeptbuch() :
 
 //Liefert das i-te Rezept aus der Liste (Werte von 0..n-1).
 //Ansonsten NULL.
-// 
-
-Rezept * MischbaresRezeptbuch::getRezept(unsigned int i) {
+Rezept* MischbaresRezeptbuch::getRezept(unsigned int i) {
 	if (i >= 0 && i < mischbareRezepte.size()) {
 		return mischbareRezepte[i];
 	} else {
@@ -26,12 +23,11 @@ Rezept * MischbaresRezeptbuch::getRezept(unsigned int i) {
 }
 
 //durchlaeuft ZutatenListe und gibt zurueck ob Zutat vorhanden ist
-
-bool MischbaresRezeptbuch::istZutatVorhanden(std::string zutat) {
+bool MischbaresRezeptbuch::istZutatVorhanden(string zutat) {
 	bool istVorhanden = false;
 	string stampfen = "Stampfen";
 	string mischen = "Mischen";
-	for (std::list<string>::iterator it = zutaten.begin(); it != zutaten.end();
+	for (list<string>::iterator it = zutaten.begin(); it != zutaten.end();
 			++it) {
 		if (*it == zutat || zutat == stampfen || zutat == mischen) {
 			istVorhanden = true;
@@ -43,9 +39,8 @@ bool MischbaresRezeptbuch::istZutatVorhanden(std::string zutat) {
 
 // oeffnet eine Datei, schreibt den Text in die uebergebene String-Liste,
 // liefert die Anzahl der gelesenen Zeilen zurueck
-
-int MischbaresRezeptbuch::readZutatenListe(std::list<std::string> * lines,
-		std::string FileName) {
+int MischbaresRezeptbuch::readZutatenListe(list<string>* lines,
+		string FileName) {
 	// Stream anlegen
 	ifstream in;
 
@@ -70,14 +65,13 @@ int MischbaresRezeptbuch::readZutatenListe(std::list<std::string> * lines,
 
 		/* und Groesse der Liste als Anzahl der Zeilen zurueck */
 		return (lines->size());
-	} catch (string & exc) {
+	} catch (string& exc) {
 		cerr << exc << endl;
 		exit(1);
 	}
 }
 
 //ermittelt aus Rezeptbuch die mischbaren Rezepte
-
 void MischbaresRezeptbuch::calculateMischbareRezepte() {
 	for (int i = 0; i < Rezeptbuch::getAnzahlRezepte(); ++i) {
 		bool rezeptMischbar = true;
@@ -97,7 +91,6 @@ void MischbaresRezeptbuch::calculateMischbareRezepte() {
 }
 
 //Löscht das i-te Rezept. Liefert bei Erfolg true, sonst false. 
-
 bool MischbaresRezeptbuch::deleteRezept(unsigned int i) {
 	if (i >= 0 && i < mischbareRezepte.size()) {
 		mischbareRezepte.erase(mischbareRezepte.begin() + i);
@@ -105,4 +98,8 @@ bool MischbaresRezeptbuch::deleteRezept(unsigned int i) {
 	} else {
 		return false;
 	}
+}
+
+list<string> MischbaresRezeptbuch::getZutatenListe() {
+	return this->zutaten;
 }
