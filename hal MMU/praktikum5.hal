@@ -1,0 +1,30 @@
+#HAL Prog schreibt in alle Register i=0 bis 2¹⁶-1 die Werte i/2
+#Gibt den gesamten Speicher wieder aus und macht 2 Additionen und gibt Ergebnis aus.
+0000 START
+#init Reg2 mit 65536
+0001 LOADNUM 256
+0002 STORE 2
+0003 MUL 2
+0004 STORE 2
+#init Register (0-9) interner Gebrauch
+0010 LOADNUM 10
+0020 STORE 1
+0025 LOAD 1
+0030 DIVNUM 2
+0040 STOREIND 1
+0050 LOAD 1
+0060 ADDNUM 1
+0070 STORE 1
+0080 SUB 2
+0090 JUMPNEG 0025
+#Ende init
+#1000 DUMPREG
+#1010 DUMPPROG
+1020 LOAD 1036
+1030 ADDNUM 1
+1040 STORE 5127
+1050 LOAD 1037
+1040 ADD 5127
+1050 OUT 1
+1080 STOP
+#erwartet 1037
