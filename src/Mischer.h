@@ -4,15 +4,12 @@
 #define MISCHER_H_H
 
 //Mischt fuer eine vorgegebene Zeit
-class Mischer
-{
-	
+class Mischer {
+
 public:
-	//
 	Mischer();
-	//
+
 	void mix(int dauer);
-	
 };
 
 #endif

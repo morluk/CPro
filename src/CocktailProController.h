@@ -4,16 +4,15 @@
 #define COCKTAILPROCONTROLLER_H_H
 
 #include "ObserverWaage.h"
-#include "string.h"
 #include "Waage.h"
-#include <string>
-#include <vector>
 #include "Dosierstation.h"
 #include "Entleerer.h"
 #include "MischbaresRezeptbuch.h"
 #include "Mischer.h"
 #include "Stampfer.h"
 #include "UserInterface.h"
+#include <string>
+#include <vector>
 
 using namespace std;
 
@@ -21,41 +20,31 @@ using namespace std;
 class UserInterface;
 
 //Legt Komponenten (Dosierstation, Stampfer, ..) an und koordiniert sie durch die Rezeptschritte
-class CocktailProController
-{
+class CocktailProController {
 public:
-	//
 	CocktailProController();
-	//
-	CocktailProController(UserInterface * userinterface);
-	//
-	std::string mischbareRezepteToString();
-	//
+
+	CocktailProController(UserInterface* userInterface);
+
+	string mischbareRezepteToString();
+
 	void mischeRezept(int index);
-	
+
 private:
-	//
-	std::vector<Dosierstation> dosierstation;
-	
-	//
+	vector<Dosierstation> dosierstation;
+
 	Entleerer entleerer;
-	
-	//
+
 	MischbaresRezeptbuch mischbaresRezeptbuch;
-	
-	//
+
 	Mischer mischer;
-	
-	//
+
 	Stampfer stampfer;
-	
-	//
-	UserInterface * userInterface;
-	
-	//
+
+	UserInterface* userInterface;
+
 	Waage waage;
-	
-	//
+
 	void init();
 };
 

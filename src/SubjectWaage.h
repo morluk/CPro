@@ -9,25 +9,22 @@
 using namespace std;
 
 //Abstraktes Subjekt des Observer Patterns.
-class SubjectWaage
-{
-	
+class SubjectWaage {
+
 public:
-	//
-	virtual void attach(const ObserverWaage * client) = 0;
-	//
-	virtual void detach(const ObserverWaage * client) = 0;
-	//
+	virtual void attach(const ObserverWaage* client) = 0;
+
+	virtual void detach(const ObserverWaage* client) = 0;
+
 	virtual void notify() = 0;
-	//
+
 	SubjectWaage();
-	//
+
 	virtual ~SubjectWaage();
-	
+
 private:
-	//
-	std::vector<ObserverWaage *> observerWaage;
-	
+	vector<ObserverWaage*> observerWaage;
+
 };
 
 #endif

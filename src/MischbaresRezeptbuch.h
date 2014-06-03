@@ -14,9 +14,8 @@
 using namespace std;
 
 //Ermittelt aus Rezeptbuch und vorhandenen Dosierstationen die tatsaechlich mischbaren Rezepte
-class MischbaresRezeptbuch: public Rezeptbuch
-{
-	
+class MischbaresRezeptbuch: public Rezeptbuch {
+
 public:
 	//Liefert die Anzahl der verfügbaren Rezepte. 
 	virtual int getAnzahlRezepte() {
@@ -33,7 +32,7 @@ public:
 
 	//
 	MischbaresRezeptbuch();
-	
+
 private:
 	//ermittelt aus Rezeptbuch die mischbaren Rezepte
 	void calculateMischbareRezepte();
@@ -47,7 +46,7 @@ private:
 
 	//
 	std::vector<Rezept *> mischbareRezepte;
-	
+
 	//
 	std::list<std::string> zutaten;
 };

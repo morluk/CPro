@@ -1,16 +1,12 @@
 //@(#) Mischer.cpp
 
-
 #include "Mischer.h"
-//
-Mischer::Mischer()
-{
-	
+
+Mischer::Mischer() {
+
 }
 
-//
-void Mischer::mix(int dauer)
-{
-	
+void Mischer::mix(int dauer) {
+
 }
 

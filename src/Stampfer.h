@@ -4,15 +4,12 @@
 #define STAMPFER_H_H
 
 //Stampft fuer eine bestimmte Zeit
-class Stampfer
-{
-	
+class Stampfer {
+
 public:
-	//
 	void stampfe(int dauer);
-	//
+
 	Stampfer();
-	
 };
 
 #endif

@@ -1,16 +1,12 @@
 //@(#) Stampfer.cpp
 
-
 #include "Stampfer.h"
-//
-void Stampfer::stampfe(int dauer)
-{
-	
+
+void Stampfer::stampfe(int dauer) {
+
 }
 
-//
-Stampfer::Stampfer()
-{
-	
+Stampfer::Stampfer() {
+
 }
 

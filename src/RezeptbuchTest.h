@@ -18,7 +18,7 @@
 
 using namespace std;
 
-class RezeptbuchTest : CppUnit::TestCase {
+class RezeptbuchTest: CppUnit::TestCase {
 public:
 	RezeptbuchTest();
 

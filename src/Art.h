@@ -3,16 +3,12 @@
 #ifndef ART_H_H
 #define ART_H_H
 
-//
-enum Art
-{
-	//
+enum Art {
 	fest,
-	//
+
 	fluessig,
-	//
+
 	eis
-	
 };
 
 #endif

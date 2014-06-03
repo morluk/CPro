@@ -1,32 +1,25 @@
 //@(#) CocktailProController.cpp
 
-
 #include "CocktailProController.h"
-//
-void CocktailProController::mischeRezept(int index)
-{
-	
+
+void CocktailProController::mischeRezept(int index) {
+
 }
 
-//
-std::string CocktailProController::mischbareRezepteToString()
-{
-	return std::string();
+string CocktailProController::mischbareRezepteToString() {
+	return string();
 }
 
-//
-CocktailProController::CocktailProController(UserInterface * userinterface)
-{
-	
+CocktailProController::CocktailProController(UserInterface* userInterface) {
+	this->userInterface = userInterface;
+	this->init();
 }
 
-//
-void CocktailProController::init()
-{
-	
+void CocktailProController::init() {
+
 }
 
-//
 CocktailProController::CocktailProController() {
-
+	this->userInterface = 0;
+	this->init();
 }

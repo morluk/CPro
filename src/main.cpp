@@ -5,6 +5,8 @@
 //#include "Rezeptbuch.h"
 #include "MischbaresRezeptbuch.h"
 #include "RezeptbuchTest.h"
+#include "UserInterface.h"
+#include "CocktailProController.h"
 
 #include <iostream>
 using namespace std;
@@ -12,56 +14,59 @@ using namespace std;
 
 int main() {
 
-    int i = 0;
+	int i = 0;
 
-    // das Rezeptbuch anlegen
-    MischbaresRezeptbuch* MyRezeptbuch = new MischbaresRezeptbuch;
+	// das Rezeptbuch anlegen
+	MischbaresRezeptbuch* MyRezeptbuch = new MischbaresRezeptbuch;
 
+	// Rezeptliste ausgeben
+	cout << "*********************************************" << endl;
+	cout << "Es gibt " << MyRezeptbuch->getAnzahlRezepte()
+			<< " mischbare Cocktails" << endl;
 
-    // Rezeptliste ausgeben
-    cout << "*********************************************" << endl;
-    cout << "Es gibt " << MyRezeptbuch->getAnzahlRezepte() << " mischbare Cocktails" << endl;
+	for (i = 0; i < MyRezeptbuch->getAnzahlRezepte(); i++) {
+		Rezept* r = MyRezeptbuch->getRezept(i);
+		cout << i << ". " << r->getName() << endl;
+	}
+	cout << "*********************************************" << endl;
 
-    for (i = 0; i < MyRezeptbuch->getAnzahlRezepte(); i++) {
-        Rezept* r = MyRezeptbuch->getRezept(i);
-        cout << i << ". " << r->getName() << endl;
-    }
-    cout << "*********************************************" << endl;
+	// Rezeptschritte abfragen
 
-    // Rezeptschritte abfragen
+	for (i = 0; i < MyRezeptbuch->getAnzahlRezepte(); i++) // f�r jedes Rezept...
+			{
+		cout << endl << endl;
+		// Cocktailname als �berschrift
+		Rezept* r = MyRezeptbuch->getRezept(i);
+		cout << "**** " << r->getName() << " ****" << endl;
 
-    for (i = 0; i < MyRezeptbuch->getAnzahlRezepte(); i++) // f�r jedes Rezept...
-    {
-        cout << endl << endl;
-        // Cocktailname als �berschrift
-        Rezept* r = MyRezeptbuch->getRezept(i);
-        cout << "**** " << r->getName() << " ****" << endl;
+		for (int j = 0; j < r->getAnzahlRezeptschritte(); j++) // f�r jeden Rezeptschritt...
+				{
+			Rezeptschritt* rs = r->getRezeptSchritt(j);
+			float Menge = rs->getMenge();
+			string Zutat = rs->getZutat();
 
-        for (int j = 0; j < r->getAnzahlRezeptschritte(); j++) // f�r jeden Rezeptschritt...
-        {
-            Rezeptschritt* rs = r->getRezeptSchritt(j);
-            float Menge = rs->getMenge();
-            string Zutat = rs->getZutat();
+			cout << j << ". " << ": " << setw(15) << Zutat << "\t" << Menge
+					<< endl;
+		}
+	}
 
-            cout << j << ". " << ": " << setw(15) << Zutat << "\t" << Menge << endl;
-        }
-    }
+	// Rezept loeschen
+	cout << "*********************************************" << endl;
+	cout << "Teste das Loeschen von Rezepten!" << endl;
+	cout << "Es gibt " << MyRezeptbuch->getAnzahlRezepte() << " Cocktails"
+			<< endl;
+	MyRezeptbuch->deleteRezept(2);
+	cout << "Jetzt gibt es ein Rezept weniger, naemlich: "
+			<< MyRezeptbuch->getAnzahlRezepte() << " Cocktails" << endl;
 
-    // Rezept loeschen
-    cout << "*********************************************" << endl;
-    cout << "Teste das Loeschen von Rezepten!" << endl;
-    cout << "Es gibt " << MyRezeptbuch->getAnzahlRezepte() << " Cocktails" << endl;
-    MyRezeptbuch->deleteRezept(2);
-    cout << "Jetzt gibt es ein Rezept weniger, naemlich: " <<
-            MyRezeptbuch->getAnzahlRezepte() << " Cocktails" << endl;
+	//char c;
+	//cin >> c;
 
+	delete MyRezeptbuch;
 
-    //char c;
-    //cin >> c;
+	RezeptbuchTest rezeptbuchTest;
 
-    delete MyRezeptbuch;
+	UserInterface userInterface;
 
-    RezeptbuchTest rezeptbuchTest;
-
-    return 1;
+	return 1;
 }

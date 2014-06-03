@@ -7,32 +7,26 @@
 #include "Art.h"
 
 //Simuliert Gewicht das auf die Waage gelegt wird und zaehlt das Attribut Gewicht hoch.
-class Simulation
-{
-	
+class Simulation {
+
 public:
-	//
 	void gewichtErhoehen(Art art);
-	//
+
 	void gewichtReduzieren();
-	//
-	void setWaage(const Waage * waage);
-	//
+
+	void setWaage(const Waage* waage);
+
 	Simulation();
-	//
+
 	void stop();
-	
+
 private:
-	//
 	int timeStep;
-	
-	//
-	Waage * waage;
-	
-	//
+
+	Waage* waage;
+
 	bool waageLaeuft;
-	
-	
+
 };
 
 #endif
