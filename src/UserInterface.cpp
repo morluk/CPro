@@ -3,8 +3,8 @@
 #include "UserInterface.h"
 
 void UserInterface::update() {
-	//TODO: implement
-	cout << this->waage->getAbsolutGewicht() << endl;
+	//TODO Wie unterscheiden wir zwischen Abfuell- und Entleervorgang?! (mg und g)
+	cout << "Delta: " << this->waage->getDeltaGewicht() << " mg" << endl;
 }
 
 void UserInterface::setWaage(Waage* waage) {
@@ -12,15 +12,61 @@ void UserInterface::setWaage(Waage* waage) {
 }
 
 UserInterface::UserInterface() {
+	cout << "******************************" << endl;
+	cout << "*     CocktailPro v1.0       *" << endl;
+	cout << "*                            *" << endl;
+	cout << "*     by Hilberg/Koehler     *" << endl;
+	cout << "******************************" << endl;
 	this->waage = 0;
 	this->cocktailProController = new CocktailProController(this);
 
-	//TODO: dies ist nur ein test
-	this->cocktailProController->mischeRezept(0);
+	this->showMenu();
 }
 
 void UserInterface::showMenu() {
-	//TODO: implement
+	char auswahl;
+	string mischbareRezepte =
+			this->cocktailProController->mischbareRezepteToString();
+	vector<string> einzelneRezepte;
+	stringstream rezepteStream;
+	rezepteStream << mischbareRezepte;
+	string tempRezept;
+	while (!rezepteStream.eof()) {
+		getline(rezepteStream, tempRezept, ';');
+		if (tempRezept != "") {
+			einzelneRezepte.push_back(tempRezept);
+		}
+	}
+	while (true) {
+		cout << "\n";
+		cout << "===CocktailPro v1.0===\n";
+		cout << "   ===Hauptmenu===\n";
+		cout << "\n";
+		cout << "Es stehen " << einzelneRezepte.size() << " Cocktails zur Verfuegung.\n";
+		cout << "\n";
+		for (int i=0; i<einzelneRezepte.size(); i++) {
+			cout << i + 1 << ": " << einzelneRezepte[i] << "\n";
+		}
+		cout << "Bitte Auswahl treffen['0' zum Verlassen]:\n";
+		do {
+			cin >> auswahl;
+			cin.ignore(1000, '\n');
+		} while (!isdigit(auswahl));
+
+		switch (auswahl) {
+		case '0':
+			exit(0);
+		default:
+			int w = auswahl - 48;
+			if (w > 0 && w <= einzelneRezepte.size()) {
+				cout << endl << einzelneRezepte[w -1] << " wird zubereitet." << endl << endl;
+				this->cocktailProController->mischeRezept(w - 1);
+			} else {
+				cout << "Ungueltige Eingabe!\n";
+			}
+		}
+	}
+
 }
 
 UserInterface::~UserInterface() {

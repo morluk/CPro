@@ -10,12 +10,14 @@ void Dosierstation::setSimulation(Simulation* simulation) {
 	this->simulation = simulation;
 }
 
+//TODO Achtung muss float als menge bearbeiten koennen!
 void Dosierstation::fuelleAb(int menge) {
 	this->ventil = true;
 	while (gewichtWaage < menge) {
 		simulation->gewichtErhoehen(fluessig);
 	}
 	this->ventil = false;
+	this->gewichtWaage = 0;
 }
 
 Dosierstation::Dosierstation(Art art, string name) {

@@ -29,6 +29,10 @@ public:
 
 	virtual void update();
 
+	string getName() {
+		return this->name;
+	}
+
 private:
 	Art art;
 

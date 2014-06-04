@@ -7,6 +7,9 @@
 #include "Waage.h"
 #include "CocktailProController.h"
 #include "Entleerer.h"
+#include <fstream>
+#include <iostream>
+#include <sstream>
 
 //Legt Komponenten (Dosierstation, Stampfer, ..) an und koordiniert sie durch die Rezeptschritte
 class CocktailProController;
@@ -25,6 +28,10 @@ public:
 	virtual ~UserInterface();
 
 	void setCocktailProController(CocktailProController* cocktailProController);
+
+	void showString(string str) {
+		cout << str;
+	}
 
 private:
 	CocktailProController* cocktailProController;

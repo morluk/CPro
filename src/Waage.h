@@ -21,6 +21,10 @@ public:
 
 	void resetDeltaGewicht();
 
+	void resetAbsolutGewicht() {
+		absolutGewicht = 0;
+	}
+
 	virtual void attach(ObserverWaage* client);
 
 	virtual void detach(ObserverWaage* client);
