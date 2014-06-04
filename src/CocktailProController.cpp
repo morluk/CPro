@@ -34,11 +34,12 @@ void CocktailProController::mischeRezept(int index) {
 		}
 		this->waage.resetDeltaGewicht();
 	}
-	this->userInterface->showString("\nIhr Cocktail wird ausgegeben\n");
+	this->userInterface->showString("\nIhr Cocktail wird ausgegeben ...\n");
 	this->entleerer.entleereBecher();
 	this->userInterface->showString("\nIhr Cocktail ist fertig\n");
 	this->waage.resetAbsolutGewicht();
 	this->waage.resetDeltaGewicht();
+	this->userInterface->showString("\nMischbehaelter wurde gereinigt.\n");
 }
 
 
