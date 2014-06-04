@@ -2,16 +2,20 @@
 
 #include "Dosierstation.h"
 
-void Dosierstation::setWaage(const Waage* waage) {
-
+void Dosierstation::setWaage(Waage* waage) {
+	this->waage = waage;
 }
 
-void Dosierstation::setSimulation(const Simulation* simulation) {
-
+void Dosierstation::setSimulation(Simulation* simulation) {
+	this->simulation = simulation;
 }
 
 void Dosierstation::fuelleAb(int menge) {
-
+	this->ventil = true;
+	while (gewichtWaage < menge) {
+		simulation->gewichtErhoehen(fluessig);
+	}
+	this->ventil = false;
 }
 
 Dosierstation::Dosierstation(Art art, string name) {
@@ -36,5 +40,5 @@ Dosierstation::~Dosierstation() {
 }
 
 void Dosierstation::update() {
-
+	this->gewichtWaage = this->waage->getDeltaGewicht();
 }

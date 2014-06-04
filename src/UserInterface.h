@@ -12,9 +12,9 @@
 class CocktailProController;
 
 //Input Output UserInterface. Konsolenapplikation
-class UserInterface : ObserverWaage {
+class UserInterface : public ObserverWaage {
 public:
-	void setWaage(const Waage* waage);
+	void setWaage(Waage* waage);
 
 	void showMenu();
 

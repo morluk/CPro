@@ -8,7 +8,7 @@
 #include "Simulation.h"
 
 //Oeffnet das Ventil des Mischbehaelters. Schliesst das Ventil, sobald das Gewicht des Mischbehaelters 0 ist.
-class Entleerer: ObserverWaage {
+class Entleerer : public ObserverWaage {
 
 public:
 	void entleereBecher();
@@ -19,7 +19,7 @@ public:
 
 	Simulation* initSimulation();
 
-	void setWaage(const Waage* waage);
+	void setWaage(Waage* waage);
 
 	void update();
 

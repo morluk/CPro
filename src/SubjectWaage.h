@@ -12,9 +12,9 @@ using namespace std;
 class SubjectWaage {
 
 public:
-	virtual void attach(const ObserverWaage* client) = 0;
+	virtual void attach(ObserverWaage* client) = 0;
 
-	virtual void detach(const ObserverWaage* client) = 0;
+	virtual void detach(ObserverWaage* client) = 0;
 
 	virtual void notify() = 0;
 
@@ -22,7 +22,7 @@ public:
 
 	virtual ~SubjectWaage();
 
-private:
+protected:
 	vector<ObserverWaage*> observerWaage;
 
 };

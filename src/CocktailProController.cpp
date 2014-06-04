@@ -3,11 +3,13 @@
 #include "CocktailProController.h"
 
 void CocktailProController::mischeRezept(int index) {
-
+	//TODO: implement (das ist nur ein test)
+	dosierstationen.at(0)->fuelleAb(100);
 }
 
 string CocktailProController::mischbareRezepteToString() {
-	return string();
+	//TODO: implement
+	return "";
 }
 
 CocktailProController::CocktailProController(UserInterface* userInterface) {
@@ -20,10 +22,14 @@ void CocktailProController::init() {
 	list<string> zutaten = this->mischbaresRezeptbuch.getZutatenListe();
 	for (list<string>::iterator it = zutaten.begin(); it != zutaten.end();
 			++it) {
+
 		//TODO: art richtig auswaehlen, momentan immer fluessig
-		Dosierstation dosierstation(fluessig, *it);
-		dosierstation.setWaage(&this->waage);
-		dosierstation.setSimulation(simulation);
+		Dosierstation* dosierstation = new Dosierstation(fluessig, *it);
+		//---------------------------------------------------------------
+
+		dosierstation->setWaage(&this->waage);
+		dosierstation->setSimulation(simulation);
+		this->waage.attach(dosierstation);
 		this->dosierstationen.push_back(dosierstation);
 	}
 
@@ -31,8 +37,8 @@ void CocktailProController::init() {
 	this->userInterface->setWaage(&this->waage);
 	simulation->setWaage(&this->waage);
 
-	//TODO: funktioniert nicht
-	//this->waage.attach(userInterface);
+	this->waage.attach(userInterface);
+	this->waage.attach(&this->entleerer);
 }
 
 CocktailProController::CocktailProController() {

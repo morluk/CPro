@@ -7,6 +7,6 @@ Mischer::Mischer() {
 }
 
 void Mischer::mix(int dauer) {
-
+	//TODO: implement
 }
 

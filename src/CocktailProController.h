@@ -32,7 +32,7 @@ public:
 	void mischeRezept(int index);
 
 private:
-	vector<Dosierstation> dosierstationen;
+	vector<Dosierstation*> dosierstationen;
 
 	Entleerer entleerer;
 

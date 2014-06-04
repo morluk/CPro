@@ -12,7 +12,7 @@
 using namespace std;
 
 //Oeffnet das Ventil. Schliesst das Ventil, sobald das Gewicht des Mischbehaelters der uebergebenen Grammzahl entspricht. Stoesst Simulation an.
-class Dosierstation: ObserverWaage {
+class Dosierstation : public ObserverWaage {
 
 public:
 	Dosierstation();
@@ -21,9 +21,9 @@ public:
 
 	void fuelleAb(int menge);
 
-	void setSimulation(const Simulation* simulation);
+	void setSimulation(Simulation* simulation);
 
-	void setWaage(const Waage* waage);
+	void setWaage(Waage* waage);
 
 	virtual ~Dosierstation();
 

@@ -5,6 +5,7 @@
 
 #include "Waage.h"
 #include "Art.h"
+#include <unistd.h>
 
 //Simuliert Gewicht das auf die Waage gelegt wird und zaehlt das Attribut Gewicht hoch.
 class Simulation {
@@ -14,14 +15,14 @@ public:
 
 	void gewichtReduzieren();
 
-	void setWaage(const Waage* waage);
+	void setWaage(Waage* waage);
 
 	Simulation();
 
 	void stop();
 
 private:
-	int timeStep;
+	static const int TIMESTEP = 1000;
 
 	Waage* waage;
 
