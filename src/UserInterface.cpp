@@ -44,7 +44,7 @@ void UserInterface::showMenu() {
 		cout << "\n";
 		cout << "Es stehen " << einzelneRezepte.size() << " Cocktails zur Verfuegung.\n";
 		cout << "\n";
-		for (int i=0; i<einzelneRezepte.size(); i++) {
+		for (unsigned int i=0; i<einzelneRezepte.size(); i++) {
 			cout << i + 1 << ": " << einzelneRezepte[i] << "\n";
 		}
 		cout << "Bitte Auswahl treffen['0' zum Verlassen]:\n";
@@ -57,7 +57,7 @@ void UserInterface::showMenu() {
 		case '0':
 			exit(0);
 		default:
-			int w = auswahl - 48;
+			unsigned int w = auswahl - 48;
 			if (w > 0 && w <= einzelneRezepte.size()) {
 				cout << endl << einzelneRezepte[w -1] << " wird zubereitet." << endl << endl;
 				this->cocktailProController->mischeRezept(w - 1);

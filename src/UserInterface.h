@@ -31,6 +31,7 @@ public:
 
 	void showString(string str) {
 		cout << str;
+		cout.flush();
 	}
 
 private:

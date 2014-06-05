@@ -19,6 +19,7 @@ using namespace std;
 
 //Input Output UserInterface. Konsolenapplikation
 class UserInterface;
+class Mischer;
 
 //Legt Komponenten (Dosierstation, Stampfer, ..) an und koordiniert sie durch die Rezeptschritte
 class CocktailProController {
@@ -38,7 +39,7 @@ private:
 
 	MischbaresRezeptbuch mischbaresRezeptbuch;
 
-	Mischer mischer;
+	Mischer* mischer;
 
 	Stampfer stampfer;
 

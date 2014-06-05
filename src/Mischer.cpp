@@ -3,14 +3,16 @@
 #include "Mischer.h"
 
 Mischer::Mischer() {
+	this->userInterface = 0;
+}
 
+Mischer::Mischer(UserInterface* userInterface) {
+	this->userInterface = userInterface;
 }
 
 void Mischer::mix(int dauer) {
-	//TODO: eventl Ausgabe ueber UI, dann Referenz auf Controller noetig
 		for (int i= 0; i<dauer; i++) {
-			cout << "# ";
-			cout.flush();
+			this->userInterface->showString("# ");
 			usleep(100000);
 		}
 }
