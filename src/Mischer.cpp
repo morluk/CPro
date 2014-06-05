@@ -13,7 +13,7 @@ Mischer::Mischer(UserInterface* userInterface) {
 void Mischer::mix(int dauer) {
 		for (int i= 0; i<dauer; i++) {
 			this->userInterface->showString("# ");
-			usleep(100000);
+			usleep(Simulation::TIMESTEP / 2);
 		}
 }
 

@@ -14,7 +14,7 @@ void Dosierstation::setSimulation(Simulation* simulation) {
 void Dosierstation::fuelleAb(int menge) {
 	this->ventil = true;
 	while (gewichtWaage < menge) {
-		simulation->gewichtErhoehen(fluessig);
+		simulation->gewichtErhoehen(this->art);
 	}
 	this->ventil = false;
 	this->gewichtWaage = 0;

@@ -3,8 +3,11 @@
 #include "UserInterface.h"
 
 void UserInterface::update() {
-	//TODO Wie unterscheiden wir zwischen Abfuell- und Entleervorgang?! (mg und g)
-	cout << "Delta: " << this->waage->getDeltaGewicht() << " mg" << endl;
+	if (cocktailProController->activeType == cocktailProController->DOSIERSTATION) {
+		cout << "Delta: " << this->waage->getDeltaGewicht() << " mg" << endl;
+	} else {
+		cout << "Gesamtgewicht: " << this->waage->getAbsolutGewicht() << " mg" << endl;
+	}
 }
 
 void UserInterface::setWaage(Waage* waage) {

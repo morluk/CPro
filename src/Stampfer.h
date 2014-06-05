@@ -5,8 +5,12 @@
 
 #include <iostream>
 #include <unistd.h>
+#include "Simulation.h"
+#include "UserInterface.h"
 
 using namespace std;
+
+class UserInterface;
 
 //Stampft fuer eine bestimmte Zeit
 class Stampfer {
@@ -14,7 +18,12 @@ class Stampfer {
 public:
 	void stampfe(int dauer);
 
+	Stampfer(UserInterface* userInterface);
+
 	Stampfer();
+
+private:
+	UserInterface* userInterface;
 };
 
 #endif

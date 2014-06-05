@@ -19,10 +19,9 @@ public:
 
 	Simulation();
 
-	void stop();
+	static const int TIMESTEP = 1000000;
 
 private:
-	static const int TIMESTEP = 1000;
 
 	Waage* waage;
 

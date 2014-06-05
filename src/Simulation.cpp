@@ -4,31 +4,28 @@
 
 void Simulation::gewichtReduzieren() {
 	this->waage->decrement();
-	usleep(TIMESTEP);
+	usleep(TIMESTEP / 25);
 }
 
 void Simulation::gewichtErhoehen(Art art) {
-	//TODO: richtiger wert fuer art
 	switch (art) {
 	case fluessig:
-		this->waage->increment(10);
+		this->waage->increment(1);
+		usleep(TIMESTEP / 4);
 		break;
 	case fest:
 		this->waage->increment(10);
+		usleep(TIMESTEP);
 		break;
 	case eis:
-		this->waage->increment(10);
+		this->waage->increment(20);
+		usleep(TIMESTEP);
 		break;
 	}
-	usleep(TIMESTEP);
 }
 
 void Simulation::setWaage(Waage* waage) {
 	this->waage = waage;
-}
-
-void Simulation::stop() {
-	//TODO: was sollte hier gemacht werden??
 }
 
 Simulation::Simulation() {

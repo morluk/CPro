@@ -4,13 +4,15 @@
 
 void Stampfer::stampfe(int dauer) {
 	for (int i= 0; i<dauer; i++) {
-		cout << "# ";
-		cout.flush();
-		usleep(100000);
+		this->userInterface->showString("# ");
+		usleep(Simulation::TIMESTEP / 2);
 	}
 }
 
-Stampfer::Stampfer() {
-
+Stampfer::Stampfer(UserInterface* userInterface) {
+	this->userInterface = userInterface;
 }
 
+Stampfer::Stampfer() {
+	this->userInterface = 0;
+}
