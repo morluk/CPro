@@ -4,9 +4,9 @@
 
 void UserInterface::update() {
 	if (cocktailProController->activeType == cocktailProController->DOSIERSTATION) {
-		cout << "Delta: " << this->waage->getDeltaGewicht() << " mg" << endl;
+		cout << "Delta: " << this->waage->getDeltaGewicht() << " g" << endl;
 	} else {
-		cout << "Gesamtgewicht: " << this->waage->getAbsolutGewicht() << " mg" << endl;
+		cout << "Gesamtgewicht: " << this->waage->getAbsolutGewicht() << " g" << endl;
 	}
 }
 

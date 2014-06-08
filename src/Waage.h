@@ -9,7 +9,7 @@
 //Wird kontrolliert von Simulation und ermittelt das Gewicht des Mischbehaelters. Ueber notify() werden die Observer angestoßen.
 class Waage : public SubjectWaage {
 public:
-	void decrement();
+	void decrement(int step);
 
 	int getAbsolutGewicht() const;
 
@@ -17,17 +17,11 @@ public:
 
 	void increment(int step);
 
-	void notify();
-
 	void resetDeltaGewicht();
 
 	void resetAbsolutGewicht() {
 		absolutGewicht = 0;
 	}
-
-	virtual void attach(ObserverWaage* client);
-
-	virtual void detach(ObserverWaage* client);
 
 	Waage();
 

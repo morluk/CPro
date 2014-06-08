@@ -4,6 +4,7 @@
 #define OBSERVERWAAGE_H_H
 
 //Abstrakter Observer des Observer Patterns
+//TODO class umbenennen in Observer
 class ObserverWaage {
 
 public:

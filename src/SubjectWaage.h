@@ -9,18 +9,19 @@
 using namespace std;
 
 //Abstraktes Subjekt des Observer Patterns.
+//TODO class umbenennen in Subject
 class SubjectWaage {
 
 public:
-	virtual void attach(ObserverWaage* client) = 0;
+	void attach(ObserverWaage* client);
 
-	virtual void detach(ObserverWaage* client) = 0;
+	void detach(ObserverWaage* client);
 
-	virtual void notify() = 0;
+	void notify();
 
 	SubjectWaage();
 
-	virtual ~SubjectWaage();
+	~SubjectWaage();
 
 protected:
 	vector<ObserverWaage*> observerWaage;

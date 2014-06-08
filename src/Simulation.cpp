@@ -3,8 +3,8 @@
 #include "Simulation.h"
 
 void Simulation::gewichtReduzieren() {
-	this->waage->decrement();
-	usleep(TIMESTEP / 25);
+	this->waage->decrement(25);
+	usleep(TIMESTEP);
 }
 
 void Simulation::gewichtErhoehen(Art art) {

@@ -19,7 +19,7 @@ public:
 
 	Dosierstation(Art art, string name);
 
-	void fuelleAb(int menge);
+	void fuelleAb(float menge);
 
 	void setSimulation(Simulation* simulation);
 
@@ -31,6 +31,19 @@ public:
 
 	string getName() {
 		return this->name;
+	}
+
+	//Debug
+	string getArt() {
+		switch (art) {
+		case fest : return "fest";
+		break;
+		case fluessig : return "fluessig";
+		break;
+		case eis : return "eis";
+		break;
+		default: return "nichts";
+		}
 	}
 
 private:

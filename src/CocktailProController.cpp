@@ -30,9 +30,9 @@ void CocktailProController::mischeRezept(int index) {
 					tempRezept->getRezeptSchritt(i)->getMenge());
 			std::stringstream ss;
 			std::string s;
-			ss << this->waage.getDeltaGewicht();
+			ss << this->waage.getAbsolutGewicht();
 			ss >> s;
-			this->userInterface->showString("Gesamtgewicht: " + s + " mg\n");
+			this->userInterface->showString("Gesamtgewicht: " + s + " g\n");
 			this->userInterface->showString(
 					"Ventil " + dosierstationen[j]->getName()
 							+ " geschlossen\n");
@@ -74,7 +74,6 @@ void CocktailProController::init() {
 	for (list<string>::iterator it = zutaten.begin(); it != zutaten.end();
 			++it) {
 
-		//TODO: Artauswahl noch nicht getestet
 		Dosierstation* dosierstation;
 		if ((*it).find("stuecke") != string::npos) {
 			//fest
@@ -86,6 +85,7 @@ void CocktailProController::init() {
 			//fluessig
 			dosierstation = new Dosierstation(fluessig, *it);
 		}
+		this->userInterface->showString("\nDosierer: "+dosierstation->getName()+" initialisiert. Art: "+dosierstation->getArt()+"\n");
 
 		dosierstation->setWaage(&this->waage);
 		dosierstation->setSimulation(simulation);

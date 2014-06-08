@@ -7,16 +7,17 @@ Waage::Waage() {
 	deltaGewicht = 0;
 }
 
-void Waage::decrement() {
-	absolutGewicht--;
-	deltaGewicht--;
-	notify();
-}
-
-void Waage::notify() {
-	for (unsigned int i = 0; i < observerWaage.size(); i++) {
-		observerWaage.at(i)->update();
+void Waage::decrement(int step) {
+	while (step > 0) {
+		if (absolutGewicht == 0) {
+			step = 0;
+		} else {
+			absolutGewicht--;
+			deltaGewicht--;
+			step--;
+		}
 	}
+	notify();
 }
 
 int Waage::getAbsolutGewicht() const {
@@ -31,20 +32,9 @@ void Waage::increment(int step) {
 
 void Waage::resetDeltaGewicht() {
 	deltaGewicht = 0;
+	this->notify();
 }
 
 int Waage::getDeltaGewicht() const {
 	return deltaGewicht;
-}
-
-void Waage::attach(ObserverWaage* client) {
-	observerWaage.push_back(client);
-}
-
-void Waage::detach(ObserverWaage* client) {
-	for (unsigned int i = 0; i < observerWaage.size(); i++) {
-		if (observerWaage.at(i) == client) {
-			observerWaage.erase(observerWaage.begin() + i);
-		}
-	}
 }
