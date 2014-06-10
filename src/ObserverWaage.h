@@ -4,15 +4,14 @@
 #define OBSERVERWAAGE_H_H
 
 //Abstrakter Observer des Observer Patterns
-//TODO class umbenennen in Observer
-class ObserverWaage {
+class Observer {
 
 public:
-	ObserverWaage();
+	Observer();
 
 	virtual void update() = 0;
 
-	virtual ~ObserverWaage();
+	virtual ~Observer();
 };
 
 #endif

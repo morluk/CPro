@@ -9,22 +9,21 @@
 using namespace std;
 
 //Abstraktes Subjekt des Observer Patterns.
-//TODO class umbenennen in Subject
-class SubjectWaage {
+class Subject {
 
 public:
-	void attach(ObserverWaage* client);
+	void attach(Observer* client);
 
-	void detach(ObserverWaage* client);
+	void detach(Observer* client);
 
 	void notify();
 
-	SubjectWaage();
+	Subject();
 
-	~SubjectWaage();
+	~Subject();
 
 protected:
-	vector<ObserverWaage*> observerWaage;
+	vector<Observer*> observerWaage;
 
 };
 

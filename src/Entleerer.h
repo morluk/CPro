@@ -8,7 +8,7 @@
 #include "Simulation.h"
 
 //Oeffnet das Ventil des Mischbehaelters. Schliesst das Ventil, sobald das Gewicht des Mischbehaelters 0 ist.
-class Entleerer : public ObserverWaage {
+class Entleerer: public Observer {
 
 public:
 	void entleereBecher();

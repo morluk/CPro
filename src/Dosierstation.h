@@ -12,7 +12,7 @@
 using namespace std;
 
 //Oeffnet das Ventil. Schliesst das Ventil, sobald das Gewicht des Mischbehaelters der uebergebenen Grammzahl entspricht. Stoesst Simulation an.
-class Dosierstation : public ObserverWaage {
+class Dosierstation: public Observer {
 
 public:
 	Dosierstation();
@@ -36,13 +36,17 @@ public:
 	//Debug
 	string getArt() {
 		switch (art) {
-		case fest : return "fest";
-		break;
-		case fluessig : return "fluessig";
-		break;
-		case eis : return "eis";
-		break;
-		default: return "nichts";
+		case fest:
+			return "fest";
+			break;
+		case fluessig:
+			return "fluessig";
+			break;
+		case eis:
+			return "eis";
+			break;
+		default:
+			return "nichts";
 		}
 	}
 

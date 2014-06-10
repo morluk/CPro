@@ -7,7 +7,7 @@ Waage::Waage() {
 	deltaGewicht = 0;
 }
 
-void Waage::decrement(int step) {
+void Waage::decrement(float step) {
 	while (step > 0) {
 		if (absolutGewicht == 0) {
 			step = 0;
@@ -24,7 +24,7 @@ int Waage::getAbsolutGewicht() const {
 	return absolutGewicht;
 }
 
-void Waage::increment(int step) {
+void Waage::increment(float step) {
 	absolutGewicht += step;
 	deltaGewicht += step;
 	notify();

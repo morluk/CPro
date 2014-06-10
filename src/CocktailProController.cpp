@@ -11,7 +11,8 @@ void CocktailProController::mischeRezept(int index) {
 			this->userInterface->showString("\nMischer deaktiviert\n");
 		} else if (tempRezept->getRezeptSchritt(i)->getZutat() == "Stampfen") {
 			this->userInterface->showString("\nStampfer aktiviert\n");
-			this->stampfer->stampfe(tempRezept->getRezeptSchritt(i)->getMenge());
+			this->stampfer->stampfe(
+					tempRezept->getRezeptSchritt(i)->getMenge());
 			this->userInterface->showString("\nStampfer deaktiviert\n");
 		} else {
 			//finde Dosierstation zu Zutat
@@ -59,6 +60,7 @@ string CocktailProController::mischbareRezepteToString() {
 }
 
 CocktailProController::CocktailProController(UserInterface* userInterface) {
+	this->activeType = DOSIERSTATION;
 	this->mischer = new Mischer(userInterface);
 	this->stampfer = new Stampfer(userInterface);
 	this->userInterface = userInterface;
@@ -85,7 +87,10 @@ void CocktailProController::init() {
 			//fluessig
 			dosierstation = new Dosierstation(fluessig, *it);
 		}
-		this->userInterface->showString("\nDosierer: "+dosierstation->getName()+" initialisiert. Art: "+dosierstation->getArt()+"\n");
+		this->userInterface->showString(
+				"\nDosierer: " + dosierstation->getName()
+						+ " initialisiert. Art: " + dosierstation->getArt()
+						+ "\n");
 
 		dosierstation->setWaage(&this->waage);
 		dosierstation->setSimulation(simulation);
@@ -104,6 +109,7 @@ void CocktailProController::init() {
 }
 
 CocktailProController::CocktailProController() {
+	this->activeType = DOSIERSTATION;
 	this->mischer = new Mischer();
 	this->stampfer = new Stampfer();
 	this->userInterface = 0;

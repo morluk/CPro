@@ -3,10 +3,12 @@
 #include "UserInterface.h"
 
 void UserInterface::update() {
-	if (cocktailProController->activeType == cocktailProController->DOSIERSTATION) {
+	if (cocktailProController->activeType
+			== cocktailProController->DOSIERSTATION) {
 		cout << "Delta: " << this->waage->getDeltaGewicht() << " g" << endl;
 	} else {
-		cout << "Gesamtgewicht: " << this->waage->getAbsolutGewicht() << " g" << endl;
+		cout << "Gesamtgewicht: " << this->waage->getAbsolutGewicht() << " g"
+				<< endl;
 	}
 }
 
@@ -45,9 +47,10 @@ void UserInterface::showMenu() {
 		cout << "===CocktailPro v1.0===\n";
 		cout << "   ===Hauptmenu===\n";
 		cout << "\n";
-		cout << "Es stehen " << einzelneRezepte.size() << " Cocktails zur Verfuegung.\n";
+		cout << "Es stehen " << einzelneRezepte.size()
+				<< " Cocktails zur Verfuegung.\n";
 		cout << "\n";
-		for (unsigned int i=0; i<einzelneRezepte.size(); i++) {
+		for (unsigned int i = 0; i < einzelneRezepte.size(); i++) {
 			cout << i + 1 << ": " << einzelneRezepte[i] << "\n";
 		}
 		cout << "Bitte Auswahl treffen['0' zum Verlassen]:\n";
@@ -62,7 +65,8 @@ void UserInterface::showMenu() {
 		default:
 			unsigned int w = auswahl - 48;
 			if (w > 0 && w <= einzelneRezepte.size()) {
-				cout << endl << einzelneRezepte[w -1] << " wird zubereitet." << endl << endl;
+				cout << endl << einzelneRezepte[w - 1] << " wird zubereitet."
+						<< endl << endl;
 				this->cocktailProController->mischeRezept(w - 1);
 			} else {
 				cout << "Ungueltige Eingabe!\n";

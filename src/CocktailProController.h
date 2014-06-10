@@ -34,8 +34,7 @@ public:
 	void mischeRezept(int index);
 
 	enum ActiveType {
-		DOSIERSTATION,
-		ENTLEERER
+		DOSIERSTATION, ENTLEERER
 	} activeType;
 
 private:

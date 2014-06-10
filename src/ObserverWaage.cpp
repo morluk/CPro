@@ -2,10 +2,10 @@
 
 #include "ObserverWaage.h"
 
-ObserverWaage::ObserverWaage() {
+Observer::Observer() {
 
 }
 
-ObserverWaage::~ObserverWaage() {
+Observer::~Observer() {
 
 }

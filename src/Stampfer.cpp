@@ -3,7 +3,7 @@
 #include "Stampfer.h"
 
 void Stampfer::stampfe(int dauer) {
-	for (int i= 0; i<dauer; i++) {
+	for (int i = 0; i < dauer; i++) {
 		this->userInterface->showString("# ");
 		usleep(Simulation::TIMESTEP / 2);
 	}

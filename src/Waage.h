@@ -7,15 +7,15 @@
 #include "SubjectWaage.h"
 
 //Wird kontrolliert von Simulation und ermittelt das Gewicht des Mischbehaelters. Ueber notify() werden die Observer angestoßen.
-class Waage : public SubjectWaage {
+class Waage: public Subject {
 public:
-	void decrement(int step);
+	void decrement(float step);
 
 	int getAbsolutGewicht() const;
 
 	int getDeltaGewicht() const;
 
-	void increment(int step);
+	void increment(float step);
 
 	void resetDeltaGewicht();
 
@@ -26,9 +26,9 @@ public:
 	Waage();
 
 private:
-	int absolutGewicht;
+	float absolutGewicht;
 
-	int deltaGewicht;
+	float deltaGewicht;
 };
 
 #endif

@@ -2,28 +2,28 @@
 
 #include "SubjectWaage.h"
 
-SubjectWaage::SubjectWaage() {
+Subject::Subject() {
 
 }
 
-SubjectWaage::~SubjectWaage() {
+Subject::~Subject() {
 
 }
 
-void SubjectWaage::attach(ObserverWaage* client) {
+void Subject::attach(Observer* client) {
 	observerWaage.push_back(client);
 }
 
-void SubjectWaage::detach(ObserverWaage* client) {
+void Subject::detach(Observer* client) {
 	for (unsigned int i = 0; i < observerWaage.size(); i++) {
-			if (observerWaage.at(i) == client) {
-				observerWaage.erase(observerWaage.begin() + i);
-			}
+		if (observerWaage.at(i) == client) {
+			observerWaage.erase(observerWaage.begin() + i);
 		}
+	}
 }
 
-void SubjectWaage::notify() {
+void Subject::notify() {
 	for (unsigned int i = 0; i < observerWaage.size(); i++) {
-			observerWaage.at(i)->update();
-		}
+		observerWaage.at(i)->update();
+	}
 }
