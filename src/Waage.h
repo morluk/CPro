@@ -3,8 +3,8 @@
 #ifndef WAAGE_H_H
 #define WAAGE_H_H
 
-#include "ObserverWaage.h"
-#include "SubjectWaage.h"
+#include "Observer.h"
+#include "Subject.h"
 
 //Wird kontrolliert von Simulation und ermittelt das Gewicht des Mischbehaelters. Ueber notify() werden die Observer angestoßen.
 class Waage: public Subject {

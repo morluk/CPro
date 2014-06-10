@@ -3,7 +3,7 @@
 #ifndef USERINTERFACE_H_H
 #define USERINTERFACE_H_H
 
-#include "ObserverWaage.h"
+#include "Observer.h"
 #include "Waage.h"
 #include "CocktailProController.h"
 #include "Entleerer.h"

@@ -3,7 +3,7 @@
 #ifndef ENTLEERER_H_H
 #define ENTLEERER_H_H
 
-#include "ObserverWaage.h"
+#include "Observer.h"
 #include "Waage.h"
 #include "Simulation.h"
 

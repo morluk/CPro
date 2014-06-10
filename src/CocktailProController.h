@@ -3,7 +3,7 @@
 #ifndef COCKTAILPROCONTROLLER_H_H
 #define COCKTAILPROCONTROLLER_H_H
 
-#include "ObserverWaage.h"
+#include "Observer.h"
 #include "Waage.h"
 #include "Dosierstation.h"
 #include "Entleerer.h"

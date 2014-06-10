@@ -1,6 +1,6 @@
 //@(#) ObserverWaage.cpp
 
-#include "ObserverWaage.h"
+#include "Observer.h"
 
 Observer::Observer() {
 

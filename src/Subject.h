@@ -4,7 +4,7 @@
 #define SUBJECTWAAGE_H_H
 
 #include <vector>
-#include "ObserverWaage.h"
+#include "Observer.h"
 
 using namespace std;
 

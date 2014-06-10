@@ -1,6 +1,6 @@
 //@(#) SubjectWaage.cpp
 
-#include "SubjectWaage.h"
+#include "Subject.h"
 
 Subject::Subject() {
 

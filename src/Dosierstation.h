@@ -3,7 +3,7 @@
 #ifndef DOSIERSTATION_H_H
 #define DOSIERSTATION_H_H
 
-#include "ObserverWaage.h"
+#include "Observer.h"
 #include "Waage.h"
 #include "Art.h"
 #include "Simulation.h"
