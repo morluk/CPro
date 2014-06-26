@@ -11,6 +11,7 @@
 #include "Mischer.h"
 #include "Stampfer.h"
 #include "UserInterface.h"
+#include "Simulation.h"
 #include <string>
 #include <iostream>
 #include <vector>
@@ -32,10 +33,16 @@ public:
 	string mischbareRezepteToString();
 
 	void mischeRezept(int index);
+        
+        void attachAll();
+        
+        void detachAll();
 
 	enum ActiveType {
 		DOSIERSTATION, ENTLEERER
 	} activeType;
+       
+        Simulation* getSimulation();
 
 private:
 	vector<Dosierstation*> dosierstationen;
@@ -51,6 +58,8 @@ private:
 	UserInterface* userInterface;
 
 	Waage waage;
+        
+        Simulation* simulation;
 
 	void init();
 };

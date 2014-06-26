@@ -64,7 +64,7 @@ int main() {
 //
 //	delete MyRezeptbuch;
 
-	RezeptbuchTest rezeptbuchTest;
+	//RezeptbuchTest rezeptbuchTest;
 
 	UserInterface userInterface;
 

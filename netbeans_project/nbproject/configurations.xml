@@ -10,12 +10,12 @@
       <itemPath>../src/Entleerer.h</itemPath>
       <itemPath>../src/MischbaresRezeptbuch.h</itemPath>
       <itemPath>../src/Mischer.h</itemPath>
-      <itemPath>../src/ObserverWaage.h</itemPath>
+      <itemPath>../src/Observer.h</itemPath>
       <itemPath>../src/Rezeptbuch.h</itemPath>
       <itemPath>../src/RezeptbuchTest.h</itemPath>
       <itemPath>../src/Simulation.h</itemPath>
       <itemPath>../src/Stampfer.h</itemPath>
-      <itemPath>../src/SubjectWaage.h</itemPath>
+      <itemPath>../src/Subject.h</itemPath>
       <itemPath>../src/UserInterface.h</itemPath>
       <itemPath>../src/Waage.h</itemPath>
     </logicalFolder>
@@ -26,17 +26,16 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>../src/Art.cpp</itemPath>
       <itemPath>../src/CocktailProController.cpp</itemPath>
       <itemPath>../src/Dosierstation.cpp</itemPath>
       <itemPath>../src/Entleerer.cpp</itemPath>
       <itemPath>../src/MischbaresRezeptbuch.cpp</itemPath>
       <itemPath>../src/Mischer.cpp</itemPath>
-      <itemPath>../src/ObserverWaage.cpp</itemPath>
+      <itemPath>../src/Observer.cpp</itemPath>
       <itemPath>../src/RezeptbuchTest.cpp</itemPath>
       <itemPath>../src/Simulation.cpp</itemPath>
       <itemPath>../src/Stampfer.cpp</itemPath>
-      <itemPath>../src/SubjectWaage.cpp</itemPath>
+      <itemPath>../src/Subject.cpp</itemPath>
       <itemPath>../src/UserInterface.cpp</itemPath>
       <itemPath>../src/Waage.cpp</itemPath>
       <itemPath>../src/main.cpp</itemPath>
@@ -72,8 +71,6 @@
           </linkerLibItems>
         </linkerTool>
       </compileType>
-      <item path="../src/Art.cpp" ex="false" tool="1" flavor2="0">
-      </item>
       <item path="../src/Art.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="../src/CocktailProController.cpp" ex="false" tool="1" flavor2="0">
@@ -96,9 +93,9 @@
       </item>
       <item path="../src/Mischer.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="../src/ObserverWaage.cpp" ex="false" tool="1" flavor2="0">
+      <item path="../src/Observer.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="../src/ObserverWaage.h" ex="false" tool="3" flavor2="0">
+      <item path="../src/Observer.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="../src/Rezeptbuch.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -114,9 +111,9 @@
       </item>
       <item path="../src/Stampfer.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="../src/SubjectWaage.cpp" ex="false" tool="1" flavor2="0">
+      <item path="../src/Subject.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="../src/SubjectWaage.h" ex="false" tool="3" flavor2="0">
+      <item path="../src/Subject.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="../src/UserInterface.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -149,8 +146,6 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
-      <item path="../src/Art.cpp" ex="false" tool="1" flavor2="0">
-      </item>
       <item path="../src/Art.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="../src/CocktailProController.cpp" ex="false" tool="1" flavor2="0">
@@ -173,9 +168,9 @@
       </item>
       <item path="../src/Mischer.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="../src/ObserverWaage.cpp" ex="false" tool="1" flavor2="0">
+      <item path="../src/Observer.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="../src/ObserverWaage.h" ex="false" tool="3" flavor2="0">
+      <item path="../src/Observer.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="../src/Rezeptbuch.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -191,9 +186,9 @@
       </item>
       <item path="../src/Stampfer.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="../src/SubjectWaage.cpp" ex="false" tool="1" flavor2="0">
+      <item path="../src/Subject.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="../src/SubjectWaage.h" ex="false" tool="3" flavor2="0">
+      <item path="../src/Subject.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="../src/UserInterface.cpp" ex="false" tool="1" flavor2="0">
       </item>

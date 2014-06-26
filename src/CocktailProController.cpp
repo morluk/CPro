@@ -3,6 +3,8 @@
 #include "CocktailProController.h"
 
 void CocktailProController::mischeRezept(int index) {
+    attachAll();
+    
 	Rezept* tempRezept = this->mischbaresRezeptbuch.getRezept(index);
 	for (int i = 0; i < tempRezept->getAnzahlRezeptschritte(); i++) {
 		if (tempRezept->getRezeptSchritt(i)->getZutat() == "Mischen") {
@@ -47,6 +49,8 @@ void CocktailProController::mischeRezept(int index) {
 	this->waage.resetAbsolutGewicht();
 	this->waage.resetDeltaGewicht();
 	this->userInterface->showString("\nMischbehaelter wurde gereinigt.\n");
+        
+        detachAll();
 }
 
 //liefert RezeptString mit ; getrennt und in Reihenfolge 0-i
@@ -72,6 +76,12 @@ void CocktailProController::init() {
 			"\nVerbindung zu Display hergestellt.\nRezeptbuch initialisiert.\nVerbindung zu Mischer hergestellt.\n"
 					"Verbindung zu Mischbehaelter hergestellt.\nVerbindung zu Stampfer hergestellt.\n");
 	Simulation* simulation = this->entleerer.initSimulation();
+        this->simulation = simulation;
+        if (userInterface->turbo) {
+            simulation->TIMESTEP = 500000;
+        } else {
+            simulation->TIMESTEP = 1000000;
+        }
 	list<string> zutaten = this->mischbaresRezeptbuch.getZutatenListe();
 	for (list<string>::iterator it = zutaten.begin(); it != zutaten.end();
 			++it) {
@@ -94,7 +104,7 @@ void CocktailProController::init() {
 
 		dosierstation->setWaage(&this->waage);
 		dosierstation->setSimulation(simulation);
-		this->waage.attach(dosierstation);
+		//this->waage.attach(dosierstation);
 		this->dosierstationen.push_back(dosierstation);
 	}
 
@@ -102,8 +112,8 @@ void CocktailProController::init() {
 	this->userInterface->setWaage(&this->waage);
 	simulation->setWaage(&this->waage);
 
-	this->waage.attach(userInterface);
-	this->waage.attach(&this->entleerer);
+	//this->waage.attach(userInterface);
+	//this->waage.attach(&this->entleerer);
 
 	this->userInterface->showString("\nVerbindung zu Waage hergestellt\n");
 }
@@ -114,4 +124,24 @@ CocktailProController::CocktailProController() {
 	this->stampfer = new Stampfer();
 	this->userInterface = 0;
 	this->init();
+}
+
+void CocktailProController::attachAll() {
+    for (unsigned int i = 0; i < this->dosierstationen.size(); i++) {
+        this->waage.attach(dosierstationen.at(i));
+    }
+    this->waage.attach(userInterface);
+    this->waage.attach(&entleerer);
+}
+
+void CocktailProController::detachAll() {
+    for (unsigned int i = 0; i < this->dosierstationen.size(); i++) {
+        this->waage.detach(dosierstationen.at(i));
+    }
+    this->waage.detach(userInterface);
+    this->waage.detach(&entleerer);
+}
+
+Simulation* CocktailProController::getSimulation() {
+    return this->simulation;
 }

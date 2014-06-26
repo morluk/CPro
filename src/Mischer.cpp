@@ -13,6 +13,6 @@ Mischer::Mischer(UserInterface* userInterface) {
 void Mischer::mix(int dauer) {
 	for (int i = 0; i < dauer; i++) {
 		this->userInterface->showString("# ");
-		usleep(Simulation::TIMESTEP / 2);
+		usleep(this->userInterface->getCocktailProController()->getSimulation()->TIMESTEP / 2);
 	}
 }

@@ -11,9 +11,9 @@ class Waage: public Subject {
 public:
 	void decrement(float step);
 
-	int getAbsolutGewicht() const;
+	float getAbsolutGewicht() const;
 
-	int getDeltaGewicht() const;
+	float getDeltaGewicht() const;
 
 	void increment(float step);
 

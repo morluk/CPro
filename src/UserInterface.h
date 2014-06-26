@@ -33,6 +33,10 @@ public:
 		cout << str;
 		cout.flush();
 	}
+        
+        bool turbo;
+        
+        CocktailProController* getCocktailProController();
 
 private:
 	CocktailProController* cocktailProController;

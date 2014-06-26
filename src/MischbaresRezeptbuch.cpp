@@ -4,7 +4,7 @@
 
 MischbaresRezeptbuch::MischbaresRezeptbuch() :
 		Rezeptbuch() {
-	const string FileName = "zutaten.txt";
+	const string FileName = "zutaten2.txt";
 	//	zutaten = list<string>();
 	readZutatenListe(&zutaten, FileName);
 

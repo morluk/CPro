@@ -19,7 +19,7 @@ public:
 
 	Simulation();
 
-	static const int TIMESTEP = 1000000;
+	int TIMESTEP;
 
 private:
 

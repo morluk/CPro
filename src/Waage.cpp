@@ -20,7 +20,7 @@ void Waage::decrement(float step) {
 	notify();
 }
 
-int Waage::getAbsolutGewicht() const {
+float Waage::getAbsolutGewicht() const {
 	return absolutGewicht;
 }
 
@@ -35,6 +35,6 @@ void Waage::resetDeltaGewicht() {
 	this->notify();
 }
 
-int Waage::getDeltaGewicht() const {
+float Waage::getDeltaGewicht() const {
 	return deltaGewicht;
 }

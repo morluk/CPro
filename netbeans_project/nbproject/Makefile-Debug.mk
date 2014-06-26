@@ -35,17 +35,16 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/_ext/1360937237/Art.o \
 	${OBJECTDIR}/_ext/1360937237/CocktailProController.o \
 	${OBJECTDIR}/_ext/1360937237/Dosierstation.o \
 	${OBJECTDIR}/_ext/1360937237/Entleerer.o \
 	${OBJECTDIR}/_ext/1360937237/MischbaresRezeptbuch.o \
 	${OBJECTDIR}/_ext/1360937237/Mischer.o \
-	${OBJECTDIR}/_ext/1360937237/ObserverWaage.o \
+	${OBJECTDIR}/_ext/1360937237/Observer.o \
 	${OBJECTDIR}/_ext/1360937237/RezeptbuchTest.o \
 	${OBJECTDIR}/_ext/1360937237/Simulation.o \
 	${OBJECTDIR}/_ext/1360937237/Stampfer.o \
-	${OBJECTDIR}/_ext/1360937237/SubjectWaage.o \
+	${OBJECTDIR}/_ext/1360937237/Subject.o \
 	${OBJECTDIR}/_ext/1360937237/UserInterface.o \
 	${OBJECTDIR}/_ext/1360937237/Waage.o \
 	${OBJECTDIR}/_ext/1360937237/main.o
@@ -77,11 +76,6 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/netbeans_project: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/netbeans_project ${OBJECTFILES} ${LDLIBSOPTIONS}
 
-${OBJECTDIR}/_ext/1360937237/Art.o: ../src/Art.cpp 
-	${MKDIR} -p ${OBJECTDIR}/_ext/1360937237
-	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/1360937237/Art.o ../src/Art.cpp
-
 ${OBJECTDIR}/_ext/1360937237/CocktailProController.o: ../src/CocktailProController.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1360937237
 	${RM} "$@.d"
@@ -107,10 +101,10 @@ ${OBJECTDIR}/_ext/1360937237/Mischer.o: ../src/Mischer.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/1360937237/Mischer.o ../src/Mischer.cpp
 
-${OBJECTDIR}/_ext/1360937237/ObserverWaage.o: ../src/ObserverWaage.cpp 
+${OBJECTDIR}/_ext/1360937237/Observer.o: ../src/Observer.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1360937237
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/1360937237/ObserverWaage.o ../src/ObserverWaage.cpp
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/1360937237/Observer.o ../src/Observer.cpp
 
 ${OBJECTDIR}/_ext/1360937237/RezeptbuchTest.o: ../src/RezeptbuchTest.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1360937237
@@ -127,10 +121,10 @@ ${OBJECTDIR}/_ext/1360937237/Stampfer.o: ../src/Stampfer.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/1360937237/Stampfer.o ../src/Stampfer.cpp
 
-${OBJECTDIR}/_ext/1360937237/SubjectWaage.o: ../src/SubjectWaage.cpp 
+${OBJECTDIR}/_ext/1360937237/Subject.o: ../src/Subject.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1360937237
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/1360937237/SubjectWaage.o ../src/SubjectWaage.cpp
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/1360937237/Subject.o ../src/Subject.cpp
 
 ${OBJECTDIR}/_ext/1360937237/UserInterface.o: ../src/UserInterface.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1360937237
